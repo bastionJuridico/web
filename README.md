@@ -56,7 +56,8 @@ No, está alojado en GitHub Pages y es accesible directamente desde cualquier na
 
 Para consultas, sugerencias o colaboraciones, puedes contactarme en:
 
-- Correo electrónico: tu_email@ejemplo.com  
+- Director del proyecto: Rodrigo Quiroga
+- Correo electrónico: rodrigo.dev.ius@gmail.com  
 - Linkedin: [Rodrigo Quiroga](https://www.linkedin.com/in/rodrigo-quiroga/)  
 - GitHub: [bastionJuridico](https://github.com/bastionJuridico)
 
