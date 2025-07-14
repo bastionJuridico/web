@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="../icons/fav.png" type="image/x-icon">
+  <link rel="stylesheet" href="reset_archive.css">
+
+
+  <title>Autoevaluación</title>
+  <style>
+    .question {
+      margin-bottom: 20px;
+      padding: 15px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      background: #f9f9f9;
+    }
+
+    .question h3 {
+      margin-top: 0;
+    }
+
+    .options label {
+      display: block;
+      margin: 6px 0;
+      cursor: pointer;
+    }
+
+    .feedback {
+      margin-top: 10px;
+      padding: 10px;
+      border-radius: 6px;
+      font-weight: bold;
+    }
+
+    details {
+      width: 90dvw;
+    }
+
+    details input {
+      display: inline;
+      width: auto;
+      text-align: justify;
+    }
+
+    .correct {
+      color: #155724;
+      background-color: #d4edda;
+      border: 1px solid #c3e6cb;
+    }
+
+    .incorrect {
+      color: #721c24;
+      background-color: #f8d7da;
+      border: 1px solid #f5c6cb;
+    }
+
+    details div p {
+      padding: 0.5rem;
+      text-indent: 0;
+      margin: 0;
+    }
+
+    .explanation {
+      margin-top: 8px;
+      font-weight: normal;
+      font-style: italic;
+    }
+
+    summary:hover {
+      border: none;
+    }
+
+    summary:focus {
+      box-shadow: none;
+    }
+
+    #selection {
+      background-color: #ddd;
+      width: 90dvw;
+      margin: 1rem;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    #selection select {
+      padding: 0.5rem 1rem;
+      font-weight: bold;
+      font-size: large;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <header id="inicio">
+    <h1>Preguntas de Autoevaluación</h1>
+    <h2>Sobre legislación argentina</h2>
+    <a href="../../index.html">Volver a la pagina principal</a>
+  </header>
+  <main>
+    <div id="selection">
+      <h3 for="themeSelect">Selecciona la temática:</h3>
+      <select id="themeSelect">
+        <option value="minero">Derecho Minero</option>
+        <option value="privado">Derecho Privado</option>
+
+        <!-- Agrega más opciones según tus archivos -->
+
+      </select>
+    </div>
+    <h3>Cuestionario</h3>
+    <form id="quizForm"></form>
+  </main>
+  <script type="module" src="./quizConfig.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,11 @@
+@import "../../styles/reset.css";
+
+main button {        
+    font-size: 1rem;   
+    display: block;
+    margin: 1rem auto;
+}
+
+section{
+    width: 90dvw;
+}

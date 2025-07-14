@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/sources/icons/icons8-temis-96 (1).png" type="image/x-icon">
+    <link rel="stylesheet" href="reset_archive.css">
+    <title>Conceptos Jurídicos</title>
+
+    <style>
+        #biblio {
+            width: 80%;
+            height: 60dvh;
+            display: block;
+            margin: 1rem auto;
+
+        }
+
+        #editor {
+            width: 80%;
+            height: 80vh;
+            padding: 10px;
+            font-size: 18px;
+            border: 1px solid #ccc;
+        }
+
+
+
+        ol {
+            list-style: none;
+        }
+
+        #tituloInput {
+            width: 90dvw;
+
+            display: block;
+            background-color: #2F3439;
+            color: #FFA07A;
+            font-size: larger;
+            margin: 1rem auto;
+            border: none;
+            border-bottom: solid 2px #61AFEF;
+
+        }
+
+        #miInput {
+            width: 90dvw;
+            height: 20rem;
+            display: block;
+            background-color: inherit;
+            color: #FFA07A;
+            font-size: larger;
+            margin: 1rem auto;
+            border: none;
+            border-bottom: solid 2px #FFA07A;
+            border-top: solid 1px #FFA07A;
+        }
+
+        button {
+            display: block;
+            margin: 1rem auto;
+            padding: 1rem 2rem;
+            background-color: #2F3439;
+            color: #61AFEF;
+            border: none;
+            border-bottom: solid 1px #61AFEF;
+            border-radius: 0 0.5rem;
+            width: 50dvw;
+            cursor: pointer;
+        }
+
+        .linksto {
+            display: block;
+            margin: 1rem;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header id="inicio">
+        <h1>Conceptos Jurídicos en General</h1>
+    </header>
+    <nav>
+        <a href="#wingpt">Wingpt (Consulta IA)</a>
+        <a href="#anotador">Anotador</a>
+        <a href="#enciclopedia">Enciclopedia Jurídica</a>
+    </nav>
+    <div id="home">
+        <a href="../../index.html">Volver a la pagina principal</a>
+    </div>
+    <main>
+
+        <article id="wingpt">
+            <h3>Wingpt (Consulta IA)</h3>
+            <a class="linksto" href="https://wingpt.vercel.app/">Link al ChatGPT</a>
+            <iframe src="https://wingpt.vercel.app/" frameborder="0" width="100%" height="500"></iframe>
+        </article>
+
+        <article id="anotador">
+            <h3>Anotador</h3>
+            <input id="tituloInput" type="text" placeholder="Escriba el título...">
+            <textarea id="miInput" placeholder="Escriba su nota..."></textarea>
+            <button onclick="guardarNota()">Guardar nota</button>
+            <ol id="listaNotas"></ol>
+            <button onclick="cargarNota()">Cargar nota</button>
+            <button onclick="borrarNota()">Borrar nota</button>
+        </article>
+
+        <article>
+            <h3>Enciclopedia Jurídica</h3>
+
+            <h4>Conceptos de la Constitución Nacional</h4>
+            <dl>
+                <dt>Principio de inviolabilidad de la intimidad y de lesividad</dt>
+                <dd><b>Artículo 19.- Las acciones privadas de los hombres que de ningún modo ofendan al orden y a la
+                        moral pública, ni perjudiquen a un tercero, están sólo reservadas a Dios, y exentas de la
+                        autoridad de los magistrados. Ningún habitante de la Nación será obligado a hacer lo que no
+                        manda la ley, ni privado de lo que ella no prohíbe.</b>
+                    <dl>
+                        <dt>Principio de Intimidad</dt>
+                        <dd>Por acciones privadas se entiende todo aquel comportamiento que de ninguna manera afecte a
+                            un tercero. A su vez, pueden incluirse aquellas conductas que, a pesar de darse en relación
+                            con otras personas, por su naturaleza, no constituyen ningun tipo de lesión a los intereses
+                            jurídicos de alguna de las partes, o de hacerlo, existe la posibilidad jurídica de consentir
+                            dicha lesión. Respecto a esto último, claramente puede darse en situaciones donde los
+                            intereses comprometidos puedan disponerse de algún modo, quedando logicamente excluidos
+                            todos aquellos intereses que sean indisponibles, como lo es la vida o la identidad, o
+                            lesiones que por grado de afectación puedan provocar alteraciones o daños irreversibles,
+                            entre otros.</dd>
+                    </dl>
+
+                </dd>
+            </dl>
+        </article>
+
+      
+
+    </main>
+
+
+    <script>
+        var notas = JSON.parse(localStorage.getItem("notas")) || [];
+
+        function guardarNota() {
+            var titulo = document.getElementById("tituloInput").value;
+            var texto = document.getElementById("miInput").value;
+            var fecha = new Date();
+
+            if (titulo === "") {
+                alert("El título es un campo requerido");
+                return;
+            }
+
+            var nota = { titulo: titulo, texto: texto, fecha: fecha.toLocaleDateString() };
+            notas.push(nota);
+            localStorage.setItem("notas", JSON.stringify(notas));
+            mostrarNotas();
+        }
+
+        function mostrarNotas() {
+            var listaNotas = document.getElementById("listaNotas");
+            listaNotas.innerHTML = "";
+            for (var i = 0; i < notas.length; i++) {
+                var nota = notas[i];
+                var elementoLista = document.createElement("li");
+                elementoLista.textContent = nota.fecha + " - " + "Título (" + nota.titulo + ") : " + nota.texto;
+                listaNotas.appendChild(elementoLista);
+            }
+        }
+
+        function cargarNota() {
+            var titulo = prompt("Ingrese el título de la nota que desea cargar");
+            for (var i = 0; i < notas.length; i++) {
+                if (notas[i].titulo === titulo) {
+                    var nota = notas[i];
+                    document.getElementById("tituloInput").value = nota.titulo;
+                    document.getElementById("miInput").value = nota.texto;
+                    return;
+                }
+            }
+            alert("Nota no encontrada");
+        }
+
+
+        function borrarNota() {
+            var titulo = prompt("Ingrese el título de la nota que desea borrar");
+            for (var i = 0; i < notas.length; i++) {
+                if (notas[i].titulo === titulo) {
+                    notas.splice(i, 1);
+                    localStorage.setItem("notas", JSON.stringify(notas));
+                    mostrarNotas();
+                    return;
+                }
+            }
+            alert("Nota no encontrada");
+        }
+
+        window.onload = function () {
+            mostrarNotas();
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>

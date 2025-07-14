@@ -1,0 +1,2764 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Astrea</title>
+    <link rel="stylesheet" href="reset_archive.css">
+
+    <style>
+        *::selection {
+            background-color: #ffa07a43;
+        }
+
+        h3 {
+            margin: 2rem;
+            text-align: center;
+        }
+
+        .row {
+            display: flex;
+            height: 50dvh;
+            overflow: auto;
+            justify-content: center;
+            text-align: center;
+        }
+
+        #myMenu {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        #myMenu li {
+            border: none;
+            list-style: none;
+            padding: 0;
+            margin: 1rem;
+        }
+
+        li a {
+            padding: 0.5rem 1rem;
+            margin: 0;
+            border-bottom: solid 1px #FFA07A;
+
+        }
+
+        nav input {
+            border-bottom: solid 2px #FFA07A;
+            padding: 0.5rem 1rem;
+            font-weight: bold;
+        }
+
+        span {
+            display: inline;
+        }
+
+        span::before {
+            content: " ";
+        }
+
+        form {
+            padding: 1rem;
+            background-color: #2F3439;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            border-bottom: solid 1px#FFA07A;
+        }
+
+        form input {
+            border-bottom: solid 2px #FFA07A;
+            padding: 0.5rem 1rem;
+            font-weight: bold;
+        }
+
+        form button {
+            background-color: #282C34;
+            border: solid 1px #FFA07A;
+            padding: 0.5rem 2rem;
+            color: #FFA07A;
+            font-weight: bold;
+            margin: 1rem;
+            border-radius: 0.5rem;
+
+        }
+
+        form button:hover {
+            color: #61AFEF;
+            border-color: #61AFEF;
+            cursor: pointer;
+        }
+
+        #highlight {
+            background-color: #ffa07a99;
+            scroll-margin-top: 10rem;
+            color: #282C34;
+        }
+
+        article:target {
+            scroll-margin-top: 20rem;
+            margin-top: 2rem;
+            padding-top: 1rem;
+            border-top: solid 2px #61AFEF;
+        }
+
+        #topButton {
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            background-color: #2F3439;
+            border: solid #FFA07A;
+            border-radius: 1rem;
+            margin: 1rem;
+
+        }
+
+        b {
+            color: #FFA07A;
+        }
+
+        h4 {
+            margin: 1rem;
+            color: #61AFEF;
+
+        }
+
+        section:target {
+            scroll-margin-top: 10rem;
+        }
+
+        p {
+            line-height: 1.5rem;
+            padding: 1rem;
+            text-indent: 1rem;
+        }
+
+        summary::before {
+            content: " ";
+        }
+
+        summary {
+            border: none;
+            border-bottom: solid 1px #FFA07A;
+            border-radius: 0;
+            cursor: pointer;
+
+        }
+
+        details {
+            border: solid 2px #FFA07A;
+            border-bottom-left-radius: 0;
+            cursor: auto;
+
+
+        }
+
+        details div:first-of-type {
+            display: flex;
+            background-color: #2F3439;
+            padding: 2rem;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+
+
+
+        .arts {
+            padding: 0 2rem;
+        }
+    </style>
+</head>
+
+
+<body id="top">
+
+    <header>
+        <img src="../icons/icons8-themis-150.png" alt="temis">
+        <h1>Bienvenido...</h1>
+        <h2>¿Que desea consultar?</h2>
+    </header>
+
+    <nav>
+
+        <div class="row">
+            <div class="left">
+                <h3>Indice</h3>
+                <input type="text" id="mySearch" onkeyup="myFunction()" placeholder="Search.."
+                    title="Type in a category">
+                <ul id="myMenu">
+                    <li><a href="#pConocimiento">Proceso de Conocimiento</a></li>
+                    <li><a href="#pConocimientoEsp">Proceso de Conocimiento Especial</a></li>
+                    <li><a href="#pMonitorio">Procesos Monitorios</a></li>
+                    <li><a href="#pConstitucional">Procesos Constitucionales</a></li>
+                    <li><a href="#rOrdinarios">Recursos Ordinarios</a></li>
+                    <li><a href="#rExtraordinarios">Recursos Extraordinarios</a></li>
+                    <li><a href="#mPrecautorias">Medidas Precautorias</a></li>
+                    <li><a href="#mPrueba">Medios de Prueba</a></li>
+                </ul>
+            </div>
+    </nav>
+
+    <form id="search-form">
+        <input id="search-input" type="text" placeholder="Busque palabras claves...">
+        <button type="submit">Buscar</button>
+    </form>
+
+    <a href="#top" id="topButton">Top</a>
+
+    <div id="content">
+        <article id="pConocimiento">
+            <h3>Proceso de Conocimiento</h3>
+            <details>
+                <summary>Índice</summary>
+                <div class="index">
+                    <a href="#codProc">Código Procesal (Arts. 152 a 203)</a>
+                    <a href="#acordada">Acordada 28690</a>
+                    <a href="#dPreliminares">Diligencias Preliminares</a>
+                    <a href="#introductorio">Periodo Introductorio</a>
+                    <a href="#auInicial">Audiencia Inicial</a>
+                    <a href="#auFinal">Audiencia Final</a>
+                </div>
+            </details>
+            <hr>
+
+            <section id="codProc">
+                <h3>Código Procesal (Arts. 152 a 203)</h3>
+
+                <h4>
+                    LIBRO SEGUNDO DE LOS PROCESOS TÍPICOS COMUNES: DE LOS PROCESOS DE
+                    CONOCIMIENTO Y DE LOS PROCESOS DE GARANTÍAS CONSTITUCIONALES
+                </h4>
+                <h4 id="7">TÍTULO I DEL PROCESO DE CONOCIMIENTO</h4>
+
+                <h4 id="cXXXII">CAPÍTULO I PERIODO INTRODUCTIVO</h4>
+                <div class="arts">
+                    <p>Art 152° DILIGENCIAS PRELIMINARES.</p>
+
+                    <p>
+                        I.- Cuando se solicitaren diligencias preliminares se indicará el nombre de la
+                        futura parte contraria, su domicilio si fuere conocido y los fundamentos de la
+                        petición.
+                    </p>
+
+                    <p>
+                        El Juez o Tribunal accederá a las medidas sólo si las estimare necesarias para
+                        la interposición válida de la demanda.
+                    </p>
+
+                    <p>
+                        Podrán aplicarse sanciones al interpelado que no cumpliere o diere información
+                        falsa o induzca a error o destruyere u ocultare los elementos requeridos.
+                    </p>
+
+                    <p>
+                        II.- Si se produjera oposición la misma se sustanciará y resolverá en la forma
+                        prescripta para los incidentes.
+                    </p>
+
+                    <p>
+                        III.- Finalizada la diligencia así será declarado por Secretaría dejándose la
+                        constancia respectiva.
+                    </p>
+
+                    <p>
+                        IV.- Si no se dedujera la demanda en el término de tres (3) meses de
+                        practicadas las diligencias, se procederá al archivo de las actuaciones a los
+                        términos del Art. 59.
+                    </p>
+
+                    <p>Art 153° PRUEBA ANTICIPADA.</p>
+
+                    <p>Podrá solicitarse:</p>
+
+                    <p>
+                        1) La declaración anticipada de testigos, siempre que existiese temor
+                        justificado de que, eventualmente, pueda faltar o hacerse difícil su posterior
+                        comparecencia.
+                    </p>
+
+                    <p>
+                        2) Inspección judicial o informe o dictamen técnico para la comprobación del
+                        estado o calidad de lugares o cosas, cuando existiere urgencia.
+                    </p>
+
+                    <p>
+                        Estas medidas se practicarán con citación de la contraria y siguiendo el
+                        procedimiento establecido en las disposiciones pertinentes.
+                    </p>
+
+                    <p>
+                        Cuando por la urgencia excepcional u otras circunstancias debidamente
+                        justificadas, no fuere posible la citación contraria, un defensor oficial
+                        deberá intervenir en el acto en su representación.
+                    </p>
+
+                    <p>Art 154° OTROS SUPUESTOS.</p>
+
+                    <p>
+                        Antes de promoverse un proceso de conocimiento podrá prepararse el mismo
+                        pidiendo lo siguiente:
+                    </p>
+
+                    <p>
+                        a) Que la persona a quien se demandará sea citada a prestar declaración ante
+                        el Juez en el plazo que éste le fije sobre hechos o circunstancia relativos a
+                        su persona o legitimación, sin cuyo conocimiento o comprobación no pueda
+                        promoverse la acción.
+                    </p>
+
+                    <p>b) La exhibición por el poseedor o tenedor de:</p>
+
+                    <p>
+                        1) la cosa mueble que haya de pedirse por acción real, sin perjuicio de su
+                        depósito o de la medida precautoria que corresponda. Su estado, calidad,
+                        condición o localización podrán ser verificados con acompañamiento de perito.
+                    </p>
+
+                    <p>
+                        2) de un testamento cuando el solicitante se crea heredero, coheredero,
+                        legatario o albacea o se pretenda solicitar su nulidad, si no puede obtenerlo
+                        sin recurrir a la justicia.
+                    </p>
+
+                    <p>
+                        3) de los títulos o instrumentos referidos a la cosa vendida tanto por el
+                        vendedor o comprador, en caso de evicción.
+                    </p>
+
+                    <p>
+                        4) de los libros o papeles de comercio en los casos indicados en el Código y
+                        leyes de fondo.
+                    </p>
+
+                    <p>
+                        5) los documentos de la sociedad o comunidad para que los preste o exhiba el
+                        socio o comunero o quien los tenga en su poder.
+                    </p>
+
+                    <p>
+                        La exhibición se realizará en el tiempo, modo y lugar que determine el Juez
+                        atendiendo a las circunstancias del caso. Cuando el requerido no los tuviere
+                        en su poder deberá indicar, si lo conoce, el lugar en que se encuentren o
+                        quién los tiene. Efectuada la exhibición, se dejará constancia detallada de
+                        las cosas exhibidas, testimonio del testamento o del título y compulsa de
+                        libros.
+                    </p>
+
+                    <p>
+                        c) Que la persona que haya de ser demandada por reivindicación u otra acción
+                        que exija conocer el carácter en cuya virtud ocupa la cosa objeto del juicio a
+                        promover, exprese a título de qué la tiene.
+                    </p>
+
+                    <p>
+                        d) Que se indique el nombre del tutor o apoyo o curador para el juicio de que
+                        se trate e) Que se cite para el reconocimiento de la obligación de rendir
+                        cuentas, bajo apercibimiento de que en caso de no comparecer se tendrá por
+                        admitida dicha obligación.
+                    </p>
+
+                    <p>
+                        f) La citación a reconocimiento del documento privado por aquel a quien se le
+                        atribuya autoría o firma, bajo apercibimiento de tenérselo por reconocido en
+                        forma ficta.
+                    </p>
+
+                    <p>
+                        g) Podrá también admitirse otras medidas destinadas a lograr la interposición
+                        válida de la demanda, que resulten aptas conforme el futuro objeto de proceso
+                        a criterio del Juez o Tribunal.
+                    </p>
+
+                    <p>Art 155° PROCESOS DE CONOCIMIENTO. ÁMBITO.</p>
+
+                    <p>
+                        I.- Todas las contiendas judiciales que no tengan una tramitación especial
+                        serán sustanciadas y decididas en proceso de conocimiento.
+                    </p>
+
+                    <p>
+                        II.- Cuando las leyes especiales remitan al juicio o proceso sumario o
+                        sumarísimo, se entenderá que el litigio tramitará conforme al procedimiento
+                        del juicio de conocimiento, sin perjuicio de la concentración de actos
+                        conforme lo previsto en el Art. 2 inc. f) de este Código.
+                    </p>
+
+                    <p>Art 156° REQUISITOS.</p>
+
+                    <p>
+                        La demanda será deducida por escrito en soporte papel o electrónico y
+                        contendrá ineludiblemente los siguientes datos, sin perjuicio de aquellos que
+                        se disponga por acordada de la Suprema Corte de Justicia para una mejor
+                        gestión de las causas:
+                    </p>
+
+                    <p>1) Respecto del Actor deberá indicarse:</p>
+
+                    <p>
+                        En caso de personas humanas deberá expresar nombre, apellido y/o seudónimo,
+                        mención de datos de un documento oficial de identidad, domicilio real y
+                        electrónico, edad, nacionalidad, profesión y cualquier otro que se considere
+                        de relevancia.
+                    </p>
+
+                    <p>
+                        En caso de personas jurídicas privadas deberá indicarse nombre o razón social,
+                        tipo, domicilio funcional o social vigente y, en su caso, datos de su
+                        inscripción y autoridades.
+                    </p>
+
+                    <p>2) Respecto del Demandado:</p>
+
+                    <p>Deberá indicar nombre, apellido y/o seudónimo y domicilio.</p>
+
+                    <p>
+                        De lo contrario las diligencias realizadas para conocerlos, los datos que
+                        puedan servir para individualizarlos y el último domicilio conocido.
+                    </p>
+
+                    <p>
+                        Si se demandara a personas jurídicas se indicarán iguales datos que los
+                        requeridos en el inc.1, en la medida que sean conocidos.
+                    </p>
+
+                    <p>
+                        3) Objeto: La designación precisa de lo que se demanda con indicación del
+                        valor de lo reclamado o su apreciación si se tratare de bienes.
+                    </p>
+
+                    <p>
+                        4) Los hechos en que se funde explicados con claridad y precisión. Deberán
+                        indicarse los jurídicamente relevantes a los fines de la pretensión conforme
+                        el derecho que se invoca.
+                    </p>
+
+                    <p>
+                        5) Instrucción de parte: El ofrecimiento y acompañamiento de los instrumentos
+                        donde conste toda la prueba instrumental, informativa y pericial, que haga a
+                        su derecho y que haya sido obtenida en la instrucción previa tramitada en el
+                        caso por los asesores legales o expertos.
+                    </p>
+
+                    <p>
+                        6) Respecto de documentos deberán ofrecerse y acompañarse cuando obren en su
+                        poder; caso contrario, deberán ofrecerse y procederse a su descripción,
+                        indicando el lugar donde se encuentren, la persona en cuyo poder están y su
+                        contenido.
+                    </p>
+
+                    <p>
+                        7) Los informes tramitados por los asesores legales ante organismos u
+                        obtenidos por medios informáticos, debiendo indicarse el día y hora en que se
+                        realizó la consulta de los datos obtenidos.
+                    </p>
+
+                    <p>
+                        También deberán adjuntarse los dictámenes técnicos y/o científicos y/o
+                        periciales realizados con anticipación.
+                    </p>
+
+                    <p>
+                        8) Ofrecimiento toda la prueba: También deberá ofrecerse todo tipo de prueba
+                        de que intente valerse cumpliendo los recaudos que correspondan para cada una,
+                        según el caso.
+                    </p>
+
+                    <p>
+                        9) El derecho expuesto sucintamente. En caso de hacer referencia a precedentes
+                        jurisprudenciales y/o doctrina que hagan al objeto de la pretensión deberá
+                        indicarse los datos que permitan su constatación.
+                    </p>
+
+                    <p>
+                        10) Cuando se solicite la declaración de inconstitucionalidad de alguna norma,
+                        deberá indicarse con precisión:
+                    </p>
+
+                    <p>a) la norma atacada;</p>
+
+                    <p>b) los fundamentos concretos de la solicitud;</p>
+
+                    <p>c) las normas constitucionales violadas;</p>
+
+                    <p>
+                        d) los antecedentes doctrinales y jurisprudenciales, si los hubiera; y e) la
+                        solución pretendida.
+                    </p>
+
+                    <p>
+                        En caso de no cumplirse estos recaudos, el Tribunal podrá rechazar el planteo
+                        de inconstitucionalidad por abstracto.
+                    </p>
+
+                    <p>11) La petición o peticiones en términos claros, precisos y positivos.</p>
+
+                    <p>Art 157° SUBSANACIÓN DE DEFECTOS.</p>
+
+                    <p>
+                        El Tribunal verificará si se han cumplido los requisitos exigidos por el Art.
+                        precedente y los que se establecen en forma especial para el tipo de
+                        pretensión deducida.
+                    </p>
+
+                    <p>
+                        Si así no fuera, resolverá, por auto que se cumpla, subsanándose los defectos
+                        u omisiones en el plazo de tres (3) días. Si así no lo hiciere, la
+                        presentación será desestimada sin más sustanciación. En este caso se procederá
+                        al archivo de las actuaciones, con devolución al interesado de la
+                        documentación original, en su caso.
+                    </p>
+
+                    <p>Art 158° DEMANDA Y CONTESTACIÓN CONJUNTAS.</p>
+
+                    <p>
+                        El demandante y el demandado, de común acuerdo, podrán presentar al Juez la
+                        demanda y contestación en la forma prevista, ofreciendo la prueba en el mismo
+                        escrito.
+                    </p>
+
+                    <p>El Juez sin otro trámite procederá a fijar audiencia inicial.</p>
+
+                    <p>Art 159° IMPROPONIBILIDAD.</p>
+
+                    <p>
+                        Si el Tribunal estimare que la demanda es manifiestamente improponible, previa
+                        vista al Ministerio Público Fiscal, la rechazará sin más, expresando los
+                        fundamentos de su decisión. El auto que lo resuelve es apelable.
+                    </p>
+
+                    <p>
+                        En caso de que exista prejudicialidad o de no haberse agotado la instancia
+                        previa fijada por las normas pertinentes, el Tribunal, previa vista al
+                        Ministerio Público Fiscal, ordenará la suspensión del procedimiento hasta que
+                        la causa prejudicial sea finalizada o se cumpla con la instancia previa.
+                    </p>
+
+                    <p>Art 160° TRASLADO DE LA DEMANDA.</p>
+
+                    <p>
+                        Presentada la demanda en la forma prescripta por el Art. 156 o subsanadas las
+                        deficiencias conforme el Art. 157, se correrá traslado de ella al demandado,
+                        con citación y emplazamiento de veinte (20) días para que comparezca y
+                        responda.
+                    </p>
+
+                    <p>
+                        Si fueren dos o más los demandados el plazo será común y si procediera la
+                        suspensión o ampliación conforme al Art. 64 respecto a uno, se suspenderá o
+                        ampliará respecto a todos.
+                    </p>
+
+                    <p>
+                        Si el demandado residiere fuera de la República, el Juez fijará el plazo en
+                        que haya de comparecer, atendiendo a las distancias y a la mayor o menor
+                        facilidad de las comunicaciones, el que no podrá exceder de tres (3) meses.
+                    </p>
+
+                    <p>Art 161° CONTESTACIÓN DE LA DEMANDA.</p>
+
+                    <p>
+                        I.- Será formulada por escrito y en el soporte papel o en el que indiquen las
+                        acordadas que lo reglamenten.
+                    </p>
+
+                    <p>II.- Contendrá en lo pertinente los recaudos exigidos para la demanda.</p>
+
+                    <p>Deberá, además:</p>
+
+                    <p>1) Reconocer o negar categóricamente:</p>
+
+                    <p>
+                        a) los hechos expuestos en la demanda, b) la autenticidad de los instrumentos
+                        acompañados que se le atribuyan al accionado, c) la recepción de cartas,
+                        telegramas u otros medios de comunicación informáticos o digitales a él
+                        dirigidos cuyas constancias se adjunten, pudiendo estimarse su silencio o sus
+                        respuestas evasivas o ambiguas como reconocimiento de la verdad de los hechos,
+                        de la autenticidad de los documentos o de su recepción.
+                    </p>
+
+                    <p>
+                        No se aplicará esta regla en el caso de que el demandado fuera sucesor a
+                        título universal o particular de quien intervino en los hechos o suscribió o
+                        recibió los documentos, ya sea en soporte papel o electrónico, si manifestase
+                        ignorar la verdad de unos y la autenticidad o recepción de los otros.
+                    </p>
+
+                    <p>
+                        Sin embargo, si en el curso del proceso se probare que esa ignorancia era
+                        simulada y cualquiera fuese la suerte del pleito, se le aplicarán las costas
+                        de las diligencias para probar los hechos o la autenticidad de los documentos,
+                        sin perjuicio de otras sanciones que pudieren corresponder.
+                    </p>
+
+                    <p>
+                        2) Oponer todas las defensas, incluso las que tengan el carácter de previas o
+                        hagan a la insuficiencia o inexistencia de los presupuestos procesales.
+                    </p>
+
+                    <p>
+                        3) Hechos: especificar con claridad y precisión los hechos que invoque como
+                        fundamento de su defensa, determinando los jurídicamente relevantes en su
+                        oposición.
+                    </p>
+
+                    <p>4) Prueba: Ofrecer toda la prueba en la forma prescripta para el actor.</p>
+
+                    <p>
+                        5) El derecho en que se funda de igual forma que lo requerido para la demanda.
+                    </p>
+
+                    <p>
+                        6) Cuando se deduzca inconstitucionalidad de alguna norma deberán cumplir
+                        iguales recaudos que los exigidos en la demanda.
+                    </p>
+
+                    <p>Art 162° RECONVENCIÓN.</p>
+
+                    <p>
+                        Juntamente con la contestación de la demanda podrá el demandado reconvenir
+                        ajustándose a lo prescripto por el Art.156.
+                    </p>
+
+                    <p>
+                        De la reconvención se dará traslado a la actora quien deberá contestar en el
+                        plazo señalado en el Art. 165 de este Código.
+                    </p>
+
+                    <p>
+                        Art 163° El demandado podrá reconvenir aún cuando la demanda
+                        reconvencional debiera tramitarse por la vía monitoria. En estos supuestos, la
+                        deducción de la reconvención importará la renuncia a la vía monitoria,
+                        tramitando la reconvención por el procedimiento de conocimiento.
+                    </p>
+
+                    <p>Art 164° MODIFICACIONES DE LA DEMANDA Y DEL RESPONDE.</p>
+
+                    <p>
+                        Mientras no se haya notificado el traslado de la demanda o de la reconvención,
+                        el actor o reconviniente según el caso podrán modificarla o ampliarla.
+                    </p>
+
+                    <p>
+                        El demandado o reconvenido podrán modificar o ampliar sus respondes mientras
+                        no se haya notificado al actor o reconviniente el traslado para negar nuevos
+                        hechos y ofrecer nueva prueba sobre éstos.
+                    </p>
+
+                    <p>Art 165° TRASLADO DEL RESPONDE.</p>
+
+                    <p>
+                        Del escrito de contestación de la demanda se dará traslado al actor o
+                        reconviniente, quien dentro del término de diez (10) días podrá ampliar su
+                        prueba respecto de los hechos nuevos introducidos por el demandado, así como
+                        en la reconvención y contestar las excepciones de previo y especial
+                        pronunciamiento deducidas.
+                    </p>
+
+                    <p>También podrá deducir la falta de presupuestos procesales del demandado.</p>
+
+                    <p>
+                        En el mismo plazo y oportunidad deberá el actor expedirse conforme lo
+                        establece el Art. 161 respecto de los documentos que se le atribuyan y a la
+                        recepción de cartas, telegramas o comunicaciones informáticas o electrónicas.
+                    </p>
+
+                    <p>Art 166° CARGA PROBATORIA DINÁMICA.</p>
+
+                    <p>
+                        Una vez trabada la litis, de acuerdo a la naturaleza del proceso, las
+                        cuestiones a probar y la legislación de fondo, el Juez puede distribuir la
+                        carga de la prueba, ponderando cuál de las partes se halla en mejor situación
+                        para aportarla. En el auto que ordene la carga probatoria dinámica, fijará un
+                        plazo para ofrecer nuevos medios de comprobación, el que no podrá ser superior
+                        a diez (10) días. Del nuevo ofrecimiento se dará vista a la contraria. El auto
+                        será apelable en forma abreviada y sin efecto suspensivo.
+                    </p>
+
+                    <p>Art 167° NUEVAS PRUEBAS. NUEVOS HECHOS.</p>
+
+                    <p>
+                        I.- NUEVAS PRUEBAS. Fuera de las oportunidades establecidas en los Art.s
+                        precedentes, no se admitirá ninguna clase de pruebas. Excepcionalmente, podrán
+                        admitirse documentos de fecha posterior o anterior siempre que se preste
+                        juramento de no haberlos conocido antes.
+                    </p>
+
+                    <p>
+                        Esta facultad podrá ejercerse mientras no se haya fijado la fecha para la
+                        audiencia final.
+                    </p>
+
+                    <p>
+                        II.- HECHOS NUEVOS Y SU PRUEBA. Dentro del mismo plazo podrán alegarse hechos
+                        nuevos y ofrecerse prueba sobre ellos.
+                    </p>
+
+                    <p>
+                        III.- INCIDENTE- TRÁMITE. Se sustanciará con un traslado a la contraria por
+                        cinco (5) días. Al contestar el traslado el litigante deberá ajustarse a lo
+                        dispuesto por el Art. 161 inc. 1. Tendrá derecho a ofrecer contraprueba para
+                        desvirtuar el hecho nuevo o las nuevas pruebas alegadas y su naturaleza.
+                    </p>
+
+                    <p>
+                        Si el incidente se sustanciara hasta cinco (5) días antes de la fecha fijada
+                        para la realización de la audiencia inicial, el Tribunal se pronunciará sobre
+                        la admisión o el rechazo de la nueva prueba o nuevo hecho en ésta. Si fuera
+                        posterior, emitirá pronunciamiento mediante auto.
+                    </p>
+
+                </div>
+                <h4 id="cXXXIII">CAPÍTULO II EXCEPCIONES</h4>
+                <div class="arts">
+                    <p>Art 168° EXCEPCIONES DE PREVIO Y ESPECIAL PRONUNCIAMIENTO.</p>
+
+                    <p>
+                        I.- Conjuntamente con la contestación podrá el demandado o reconvenido oponer
+                        excepciones de pronunciamiento previo en forma conjunta y subsidiaria, así
+                        como la prueba de que quisiese valerse.
+                    </p>
+
+                    <p>
+                        II.- El actor podrá denunciar la falta de presupuestos procesales del
+                        demandado al contestar el traslado de la contestación de demanda del Art.165
+                        de la misma forma indicada en el párrafo anterior. El demandado podrá
+                        contestar dentro de los cinco (5) días posteriores a la notificación simple
+                        del decreto que provee dicha petición.
+                    </p>
+
+                    <p>
+                        III.- Todas las excepciones previas serán resueltas en la audiencia inicial,
+                        dejándose constancia.
+                    </p>
+
+                    <p>IV.- Sólo son admisibles como excepciones previas:</p>
+
+                    <p>1) Incompetencia.</p>
+
+                    <p>
+                        2) Litispendencia. Es prueba necesaria para su admisión acompañar testimonio
+                        del escrito de demanda del juicio pendiente.
+                    </p>
+
+                    <p>
+                        3) Cosa Juzgada adjuntando testimonio de la sentencia respectiva. En tal caso
+                        deberá efectuarse el examen integral de las documentaciones a fin de demostrar
+                        que se trata del mismo asunto sometido a decisión judicial, o que, por existir
+                        coincidencia, conexidad, accesoriedad o subsidiariedad, la sentencia firme ya
+                        ha resuelto lo que constituye la materia o pretensión deducida en el nuevo
+                        juicio que se promueve.
+                    </p>
+
+                    <p>
+                        4) Falta de capacidad procesal o de personería en los litigantes o en quienes
+                        los representen.
+                    </p>
+
+                    <p>5) Defecto legal en el modo de proponer la demanda.</p>
+
+                    <p>
+                        6) Falta de cumplimento de las obligaciones derivadas del proceso anterior en
+                        los casos que este Código o las leyes de fondo así lo establezcan.
+                    </p>
+
+                    <p>
+                        7) Transacción, conciliación, acuerdo de mediación, desistimiento o caducidad
+                        del derecho. Para su admisión debe adjuntarse conjuntamente los instrumentos o
+                        testimonios que lo acrediten.
+                    </p>
+
+                    <p>8) La defensa sustancial de prescripción.</p>
+
+                    <p>
+                        Art 169° PROHIBICIÓN DE DEDUCIRLAS POSTERIORMENTE-DECLARACIÓN DE OFICIO.
+                    </p>
+
+                    <p>
+                        Las excepciones enumeradas en el artículo precedente, no podrán ser deducidas
+                        vencido el plazo que dicha norma señala, pero el juzgador podrá declarar de
+                        oficio, en la audiencia preliminar y antes de pronunciarse sobre las pruebas,
+                        su incompetencia en razón de la materia, de la cuantía o del grado; o que
+                        existen litispendencia o cosas juzgada o falta de personería.
+                    </p>
+
+                    <p>Art 170° SUSTANCIACIÓN.</p>
+
+                    <p>
+                        En caso de haberse ofrecido prueba que deba producirse, contestado por el
+                        actor en el traslado del Art. 165, se suspenderá el proceso y se procederá a
+                        su sustanciación, pronunciándose sobre la admisión de la prueba de las
+                        excepciones y ordenando su producción en un plazo de diez (10) días. Producida
+                        la prueba se dará vista al Ministerio Público Fiscal. Evacuada la vista o
+                        vencido el plazo para ello, se reanudará el proceso.
+                    </p>
+
+                    <p>Art 171° EFECTOS DEL AUTO QUE ACOGE EXCEPCIONES PREVIAS.</p>
+
+                    <p>
+                        I.- Al pronunciarse sobre las excepciones previas, en la oportunidad prevista
+                        en el Art. 173 inc. c) de este Código, primero deberá hacerlo sobre la
+                        competencia, la cosa juzgada y la litispendencia. En caso de declararse
+                        competente, resolverá al mismo tiempo sobre las demás excepciones previas.
+                    </p>
+
+                    <p>II.- Si se acogieren definitivamente excepciones previas se procederá:</p>
+
+                    <p>
+                        a) Si se tratare de incompetencia, dispondrá la remisión del expediente al
+                        Tribunal que estime competente, por la vía pertinente.
+                    </p>
+
+                    <p>
+                        b) Si se tratare de litispendencia, cosa juzgada o prescripción liberatoria,
+                        se ordenará el archivo del expediente.
+                    </p>
+
+                    <p>
+                        c) Si se tratare de litispendencia por conexidad, se remitirá al Tribunal
+                        donde tramita el otro proceso. Si ambos procesos fueran idénticos, se
+                        procederá al archivo.
+                    </p>
+
+                    <p>
+                        d) En caso de defecto legal o falta de capacidad procesal o de personería,
+                        falta de cumplimiento de obligaciones derivadas de proceso anterior, emplazará
+                        a que se subsanen los defectos en el plazo previsto en el Art. 157. Vencido
+                        sin que el litigante cumpla lo resuelto, se lo tendrá por desistido de su
+                        pretensión, con costas a su cargo.
+                    </p>
+
+                    <p>
+                        III.- La resolución sobre excepciones de previo y especial pronunciamiento
+                        será apelable, con efecto suspensivo.
+                    </p>
+
+                </div>
+                <h4 id="cXXXIV">CAPÍTULO III PERIODO PROBATORIO. AUDIENCIA INICIAL</h4>
+                <div class="arts">
+                    <p>Art 172° AUDIENCIA INICIAL.</p>
+
+                    <p>
+                        I.- Cumplidas las etapas previas, si se estimare que las constancias obrantes
+                        en las actuaciones son suficientes para la resolución del litigio o la
+                        cuestión es de puro derecho, así lo declarará el Tribunal, de oficio o a
+                        petición de parte, por auto. La decisión será apelable, con efecto suspensivo.
+                        Firme, procederá a dictar sentencia.
+                    </p>
+
+                    <p>
+                        En caso de acumulación objetiva de pretensiones escindibles y previo acuerdo
+                        de partes, el Juez podrá resolver parcialmente el proceso sobre ellas. Esta
+                        resolución causará ejecutoria y podrá, en caso de incumplimiento, ser
+                        continuada por el procedimiento de la ejecución de sentencia.
+                    </p>
+
+                    <p>
+                        II.- En caso contrario y existiendo hechos conducentes acerca de los cuales no
+                        haya conformidad entre los litigantes, y aunque ellos no lo pidieran, el
+                        Tribunal señalará día y hora para la realización de la audiencia inicial, la
+                        que deberá realizarse dentro de los veinte (20) días siguientes.
+                    </p>
+
+                    <p>
+                        Esta audiencia deberá notificarse por cédula a domicilio real, a la dirección
+                        electrónica de los litigantes y al domicilio procesal electrónico.
+                    </p>
+
+                    <p>
+                        III.- COMPARECENCIA. Como regla general, las partes deberán comparecer a la
+                        audiencia inicial en forma personal. Excepcionalmente, cuando por previsión
+                        legal u orden judicial no sea posible la presencia personal simultánea de
+                        ambos litigantes o ello sea inconveniente por razones fundadas, sólo se
+                        admitirá la comparecencia de los litigantes por medio de apoderado. En los
+                        demás supuestos, mediando petición de parte por motivos fundados, a juicio del
+                        Tribunal, se autorizará que se presente por medio de representantes, quienes
+                        deberán concurrir con instrucciones suficientes para el normal desarrollo de
+                        la audiencia. La falta o insuficiencia de instrucciones no podrá ser invocada
+                        para la suspensión de la audiencia, salvo lo previsto en el Art. 48 inc. 4 de
+                        este Código.
+                    </p>
+
+                    <p>
+                        Los incapaces y las personas jurídicas los harán por medio de su representante
+                        o asesor letrado con instrucciones específicas sobre la posible conciliación.
+                        Las personas con capacidad restringida deberán concurrir acompañadas por su
+                        apoyo.
+                    </p>
+
+                    <p>
+                        Si por razones de fuerza mayor, debidamente acreditadas, una de las partes no
+                        pudiera comparecer a la audiencia ni dar instrucciones a sus representantes,
+                        podrá diferirse ésta por una (1) sola vez.
+                    </p>
+
+                    <p>
+                        IV.- INCOMPARECENCIA: a) La incomparecencia injustificada de cualquiera de los
+                        litigantes o sus representantes, no suspenderá la realización de la audiencia,
+                        la que se celebrará por el Tribunal con la presencia de la parte que concurra.
+                        b) A la parte incompareciente, el Juez podrá tener por desistida la prueba por
+                        ella ofrecida que no esté hasta ese momento incorporada al proceso, salvo la
+                        instrumental que se encuentre en poder de terceros. c) Las partes quedarán
+                        notificadas de todas las decisiones que el Tribunal adopte en el caso en forma
+                        simple. d) Concluida la audiencia, las partes no podrán en lo sucesivo
+                        plantear cuestión alguna respecto de las resoluciones que se pronuncien en el
+                        curso de la misma. e) En caso de incomparecencia de ambas partes, se fijará
+                        por única vez una nueva audiencia. De reiterarse en ésta la incomparecencia de
+                        ambas partes, se dictará el sobreseimiento de la causa y se ordenará el
+                        archivo de las actuaciones.
+                    </p>
+
+                    <p>Art 173° CONTENIDO DE LA AUDIENCIA INICIAL.</p>
+
+                    <p>
+                        La audiencia inicial deberá ser dirigida en forma indelegable y bajo pena de
+                        nulidad, por el Juez de la causa.
+                    </p>
+
+                    <p>En su desarrollo se cumplirán las siguientes actividades:</p>
+
+                    <p>
+                        a) Se invitará a las partes a una conciliación, conforme al Art. 83 y
+                        siguientes, u otra forma de solución de conflictos que acordarán en la
+                        audiencia. Debe procurarse un avenimiento parcial o total del litigio.
+                    </p>
+
+                    <p>
+                        b) Las partes pueden rectificar errores materiales en que hubieren incurrido
+                        en sus escritos iníciales.
+                    </p>
+
+                    <p>
+                        c) El Tribunal resolverá las excepciones opuestas de previo y especial
+                        pronunciamiento. También podrá dictar medidas para sanear el proceso o
+                        presupuestos procesales faltantes que no hayan sido deducidos por las partes.
+                    </p>
+
+                    <p>
+                        d) Oídas las partes, el Tribunal fijará en forma definitiva los hechos objeto
+                        del proceso y aquéllos sobre los cuales versará la prueba.
+                    </p>
+
+                    <p>
+                        e) El Tribunal se pronunciará sobre la admisibilidad de las pruebas ofrecidas
+                        por las partes, ordenando las medidas necesarias para su producción. Podrá
+                        rechazar, de oficio, fundadamente la prueba prohibida por la ley y la
+                        notoriamente impertinente e innecesaria. El rechazo de prueba será apelable en
+                        forma abreviada y sin efecto suspensivo.
+                    </p>
+
+                    <p>
+                        Si se tratare de prueba pericial, la designación de los peritos, en la forma
+                        prevista en este Código, deberá realizarse en la misma audiencia.
+                    </p>
+
+                    <p>
+                        f) El Tribunal podrá ordenar prueba de oficio, conforme el Art. 46 inc. 5,
+                        para una mejor búsqueda de la verdad.
+                    </p>
+
+                    <p>
+                        g) Fijar el plazo dentro del cual deberá producirse toda la prueba que no deba
+                        rendirse en la audiencia final. Este plazo podrá ser ampliado prudencialmente
+                        por el juzgado a petición de parte, por única vez.
+                    </p>
+
+                    <p>
+                        h) El Juez podrá fijar de común acuerdo con las partes, según las
+                        características del caso, la fecha de la audiencia final.
+                    </p>
+
+                    <a href="#mPrueba">Ver Arts. 174 a 199</a>
+
+                </div>
+                <h4 id="cXXXV">CAPÍTULO IV DISCUSIÓN Y SENTENCIA</h4>
+                <div class="arts">
+                    <p>Art 200° AUDIENCIA FINAL.</p>
+
+                    <p>
+                        I.- Producida la totalidad de la prueba que no pueda recibirse oralmente o
+                        acaecida su caducidad, el Juez o Tribunal, fijará audiencia final emplazando a
+                        las partes, testigos y peritos cuando correspondiere, a concurrir bajo
+                        apercibimiento de realizarse con la parte que se encuentre presente. De no
+                        haberse fijado fecha de audiencia final conforme a lo previsto en el inciso h)
+                        del Art. 173, la audiencia deberá fijarse para que tenga lugar dentro de un
+                        plazo mínimo de diez (10) días y máximo de veinte (20) días.
+                    </p>
+
+                    <p>
+                        II.- Será carga de las partes notificar a los testigos y peritos de los que
+                        pretendan valerse.
+                    </p>
+
+                    <p>
+                        III.- Será a cargo del Tribunal notificar a los demás interesados, como los
+                        Amigos del Tribunal, el Ministerio Público Fiscal o Pupilar.
+                    </p>
+
+                    <p>
+                        IV.- Es carga del litigante que ofreció la prueba personal verificar que las
+                        notificaciones no fracasen por cambio de domicilio, en cuyo caso oportunamente
+                        deberá denunciar el nuevo hasta cinco (5) días antes de la audiencia, caso
+                        contrario se lo tendrá por desistido de dicha prueba si el citado no
+                        compareciere.
+                    </p>
+
+                    <p>
+                        V.- Fijada la audiencia final, la renuncia al mandato sólo se notificará al
+                        mandante y tendrá efecto una vez concluida la misma y no podrá utilizarse como
+                        motivo o causal de suspensión.
+                    </p>
+
+                    <p>
+                        VI.- Únicamente podrá suspenderse la audiencia por un término no superior a
+                        quince (15) días cuando:
+                    </p>
+
+                    <p>
+                        a) deba resolverse alguna cuestión incidental que por su naturaleza no pueda
+                        decidirse en la misma audiencia.
+                    </p>
+
+                    <p>
+                        b) Cuando el Tribunal no se encuentre integrado por razones debidamente
+                        justificadas. c) Cuando no comparecieren los testigos o peritos debidamente
+                        notificados o faltare agregar algún elemento cuya intervención o agregación el
+                        Juez o Tribunal considere indispensable, podrá suspenderse la audiencia. En
+                        ese caso se fijará el día y hora de la nueva audiencia y ello valdrá de
+                        notificación a los comparecientes. A los incomparecientes que no hubieran
+                        justificado debidamente su ausencia, se los tendrá por notificados. Los
+                        restantes deberán ser notificados por las partes, según corresponda.
+                    </p>
+
+                    <p>Art 201° REALIZACIÓN DE LA AUDIENCIA.</p>
+
+                    <p>
+                        I.- El debate será oral, público y continuo. Cuando la publicidad resulte
+                        inconveniente o afecte el orden público, por resolución motivada, podrá
+                        disponerse que se realice a puertas cerradas.
+                    </p>
+
+                    <p>
+                        II.- El día y hora fijados, se declarará abierto el acto con las partes que
+                        hayan concurrido y se observarán las siguientes reglas:
+                    </p>
+
+                    <p>
+                        a) Se intentará la solución del conflicto por modos alternativos, pudiendo en
+                        la misma intervenir un mediador por un plazo no mayor de treinta (30) minutos.
+                    </p>
+
+                    <p>
+                        b) Las partes deberán concurrir personalmente o en su caso otorgar
+                        instrucciones expresas para conciliar o no, bajo apercibimiento de pérdida de
+                        los honorarios de los asesores letrados. Cuando por previsión legal u orden
+                        judicial no sea posible la presencia personal simultánea de ambos litigantes o
+                        ello sea inconveniente por razones fundadas, sólo se admitirá la comparecencia
+                        de los litigantes por intermedio de apoderado.
+                    </p>
+
+                    <p>
+                        c) En caso de no arribar a un acuerdo, se dará lectura a la prueba a recibirse
+                        en la causa y se informará de los convenios efectuados por los litigantes
+                        respecto del objeto del proceso, los hechos sobre los que coincidan como
+                        probados, así como las pruebas que renuncian o desisten y aquellas que hayan
+                        de producirse en audiencia.
+                    </p>
+
+                    <p>d) El Juez deberá:</p>
+
+                    <p>
+                        1) Dirigir el debate, ordenar las lecturas, formular las advertencias que
+                        corresponda, recibir juramentos, moderar las discusiones e impedir
+                        derivaciones impertinentes, sin coartar el derecho de defensa;
+                    </p>
+
+                    <p>
+                        2) Procurar obtener de la prueba oral los elementos necesarios para establecer
+                        la verdad de los hechos;
+                    </p>
+
+                    <p>
+                        3) Mantener el orden de la sala y ordenar el desalojo del público o persona
+                        cuando se efectúen manifestaciones o se adopten actitudes que entorpezcan su
+                        desarrollo.
+                    </p>
+
+                    <p>
+                        e) A continuación se recibirán las pruebas, pudiendo el Tribunal y las partes
+                        interrogar, primero por el pliego de preguntas y luego libremente a los
+                        peritos y testigos, en ese orden, sin otra limitación que el objeto mismo del
+                        proceso. Debe guardarse lo dispuesto para las preguntas por este Código. En
+                        los casos que el Tribunal considere prudente podrá prorrogarla hasta un máximo
+                        de cinco (5) días.
+                    </p>
+
+                    <p>
+                        f) Alegatos: Rendida la prueba oral, las partes se expedirán sobre el mérito
+                        total de la causa pudiendo cada parte disponer de veinte (20) minutos para su
+                        alegato. El plazo podrá ampliarse por el Tribunal cuando lo justifique la
+                        complejidad del caso. A petición de la contraria, podrá otorgarse por una sola
+                        vez cinco (5) minutos a cada parte para ejercer el derecho a réplica y
+                        súplica. Podrá el Tribunal a pedido de parte recibir memorial o admitir su
+                        presentación por escrito en un plazo común no mayor de cinco (5) días. Las
+                        pruebas y constancias podrán ser consultadas en el Tribunal o
+                        electrónicamente. No será motivo de préstamo del expediente papel el tener que
+                        formular alegato por escrito.
+                    </p>
+
+                    <p>
+                        g) En el mismo momento podrán también incorporarse o escucharse lo meritado
+                        por los Amigos del Tribunal cuando éstos hayan sido admitidos.
+                    </p>
+
+                    <p>
+                        h) Formulados los alegatos, el Juez o Tribunal declarará cerrado el debate y
+                        llamará inmediatamente autos para sentencia, la que será pronunciada en el
+                        término de treinta (30) días a contar desde la ejecutoria del llamamiento.
+                    </p>
+
+                    <p>
+                        i) La audiencia no terminará hasta que no sean ventiladas las cuestiones
+                        propuestas y dictado el fallo.
+                    </p>
+
+                    <p>Art 202° ACTA.</p>
+
+                    <p>
+                        Se levantará acta de lo sustancial de la audiencia consignando nombre de los
+                        comparecientes, de los peritos y testigo. Podrá consignarse alguna
+                        circunstancia especial a pedido de partes siempre que el Tribunal lo considere
+                        pertinente.
+                    </p>
+
+                    <p>Art 203° DOCUMENTACIÓN DE LA AUDIENCIA.</p>
+
+                    <p>
+                        La audiencia deberá ser documentada por los medios técnicos que posea el
+                        Tribunal, ya sea grabación o video o cualquier otro mecanismo apto para
+                        contener los datos, del que pueda obtenerse copia, para el caso que las partes
+                        lo requieran, la que será a su costa.
+                    </p>
+                </div>
+            </section>
+
+            <section id="acordada">
+                <h3>Protocolo de Gestion Proceso de Conocimiento (Acordada 28690)</h3>
+                <dl>
+                    <dt>Reformas</dt>
+                    <dd>
+                        <p>Antes de comenzar con el analisis del código procesal civil, comercial y tributario de
+                            Mendoza,
+                            cabe considerar las siguientes modificaciones introducidas mediante la acordada 28690:</p>
+                        <p><b>Resolunción de convocatoria de la audiencia inicial:</b> La oportunidad para determinar la
+                            celebración de la audiencia es una vez contestado el traslado del responde de la demanda
+                            (art.
+                            165) o vencido el plazo para hacerlo. También después de haber adquirido firmeza la
+                            resolución
+                            de las excepciones de previo y especial pronunciamiento, las cuales deben ser resueltas en
+                            forma
+                            previa a la audiencia inicial (a diferencia de lo establecido por el código procesal).</p>
+                        <p>Debe celebrarse en un plazo no mayor a 20 días habiles contados a partir del dictado de la
+                            resolución que la convoca, procurando siempre que sea posible, acortar el plazo.</p>
+                        <p><b>Objetivos de la audiencia inicial:</b></p>
+                        <ul>
+                            <li>Conciliar total o parcialmente sobre la materia de juicio o prueba, siempre y cuando
+                                asistan
+                                todas las partes</li>
+                            <li>Coordinar el plan de trabajo de la etapa probatoria</li>
+                            <li>Considerar las pruebas ofrecidas y los hechos que se pretenden probar con las mismas
+                            </li>
+                            <li>Considerar la aplicación de la carga dinámica de la prueba y comunicarselo a las partes
+                                o
+                                admitir / rechazar los medios propuestos en la oportunidad del art. 166 (una vez trabada
+                                la
+                                litis, 10 días)</li>
+                            <li>Dictar el auto de sustanciación de la prueba, el cual debe contener la fecha de
+                                vencimiento
+                                del plazo para producir y la fecha y hora de la audiencia final</li>
+                            <li>La audiencia final debe celebrarse en un plazo no mayor a 120 días corridos</li>
+                            <li>El plazo de producción de prueba, su eventual prorroga y el de celebración de la
+                                audiencia
+                                final, deben realizarse dentro de los 120 días corridos del auto de producción de prueba
+                            </li>
+                        </ul>
+                        <p><b>IMPORTANTE:</b> La acordada aclara que el hecho de que se haya fijado la decha de
+                            audiencia
+                            final no implica la pérdida de la facultad para ofrecer nueva prueba, algo que contradice lo
+                            establecido por el art. 167 i. 1</p>
+                    </dd>
+                </dl>
+            </section>
+
+            <section id="dPreliminares">
+                <h3>Diligencias Preliminares</h3>
+                <dl>
+                    <dt>Procedencia (Art. 152)</dt>
+                    <dd>
+                        <p>Estas actuaciones solamente son procedentes en caso de que se busque una interposición válida
+                            de
+                            la demanda o garantizar la producción de determinadas pruebas. Por ello son de
+                            interpretación
+                            restrictiva.</p>
+                    </dd>
+                    <dt>Trámite (Art. 152)</dt>
+                    <dd>
+                        <p>Se interponen previo a la presentación de la demanda, por escrito con los datos que se
+                            conozcan
+                            del eventual demandado y el modo en que se sustancia y resuelve el el prescripto para los
+                            incidentes.</p>
+                        <p>Una vez finalizadas las diligencias, si no se deduce la demanda en el plazo de 3 meses, se
+                            procede al archivo de las actuaciones.</p>
+                        <p>Es importante resaltar que el interpelado que no cumpla o diere información falsa, como así
+                            también induzca a errores o destruya u oculte los elementos requeridos será pasible de
+                            sanciones. A su vez, el mismo puede oponerse a las mismas, lo cual se tramitará del mismo
+                            modo
+                            en que se hace con los incidentes.</p>
+                    </dd>
+                    <dt>Medidas Preliminares Genericas (Art. 154)</dt>
+                    <dd>
+                        <p>En sí puede requerirse cualquier tipo de información o medida que permita una interposición
+                            válida de la demanda, ya sea porque se necesiten conocer datos respecto de la persona del
+                            demandado, o sobre la situación de algún bien en concreto, como así también si se necesita
+                            el
+                            reconocimiento de algún documento. A continuación se citan
+                            algunas de ellas:</p>
+                        <ul>
+                            <li>Que la persona a quien se demandará sea citada a prestar declaración ante el Juez en el
+                                plazo que éste le fije sobre hechos o circunstancia relativos a su persona o
+                                legitimación,
+                                sin cuyo conocimiento o comprobación no pueda promoverse la acción.</li>
+                            <li>La exhibición por el poseedor o tenedor de:</li>
+                            <ul>
+                                <li> la cosa mueble que haya de pedirse por acción real, sin perjuicio de su depósito o
+                                    de
+                                    la medida precautoria que corresponda. Su estado, calidad, condición o localización
+                                    podrán ser verificados con acompañamiento de perito.</li>
+                                <li>de un testamento cuando el solicitante se crea heredero, coheredero, legatario o
+                                    albacea
+                                    o se pretenda solicitar su nulidad, si no puede obtenerlo sin recurrir a la
+                                    justicia.
+                                </li>
+                                <li>de los títulos o instrumentos referidos a la cosa vendida tanto por el vendedor o
+                                    comprador, en caso de evicción.</li>
+                                <li>de los libros o papeles de comercio en los casos indicados en el Código y leyes de
+                                    fondo.</li>
+                                <li>los documentos de la sociedad o comunidad para que los preste o exhiba el socio o
+                                    comunero o quien los tenga en su poder.</li>
+                            </ul>
+                            <li>Que la persona que haya de ser demandada por reivindicación u otra acción que exija
+                                conocer
+                                el carácter en cuya virtud ocupa la cosa objeto del juicio a promover, exprese a título
+                                de
+                                qué la tiene.</li>
+                            <li>Que se indique el nombre del tutor o apoyo o curador para el juicio de que se trate
+                            </li>
+                            <li>Que se cite para el reconocimiento de la obligación de rendir cuentas, bajo
+                                apercibimiento
+                                de que en caso de no comparecer se tendrá por admitida dicha obligación.</li>
+                            <li>La citación a reconocimiento del documento privado por aquel a quien se le atribuya
+                                autoría
+                                o firma, bajo apercibimiento de tenérselo por reconocido en forma ficta.</li>
+                            <li>Podrá también admitirse otras medidas destinadas a lograr la interposición válida de la
+                                demanda, que resulten aptas conforme el futuro objeto de proceso a criterio del Juez o
+                                Tribunal.</li>
+                        </ul>
+                    </dd>
+
+                    <dt>Prueba Anticipada (Art. 153)</dt>
+                    <dd>
+                        <p>Solo puede solicitarse la producción anticipada de prueba en los siguientes casos:</p>
+                        <ul>
+                            <li>Prueba Testimonial: Siempre y cuando exista temor justificado de que, eventualmente,
+                                pueda
+                                faltar o hacerse difícil la posterior comparecencia del testigo.</li>
+                            <li>Inspección Judicial o Informe/Dictamen técnico: Ya sea para la comprobación del estado o
+                                calidad de lugares o cosas, siempre y cuando exista urgencia de hacerlo.</li>
+                        </ul>
+                        <p>Para su producción se cita a la contraria y se procede de acuerdo a las disposiciones
+                            relativas a
+                            cada medida.</p>
+                        <p>Excepcionalmente, por razones de urgencia u otras circunstancias debidamente justificadas, no
+                            sea
+                            posible la citación de la contraria, un defensor oficial deberá intervenir en el acto en su
+                            representación.</p>
+                    </dd>
+            </section>
+
+            <section id="introductorio">
+                <h3>Periodo Introductorio</h3>
+                <dl>
+                    <dt>Ambito de procedencia (art. 155)</dt>
+                    <dd>
+                        <ul>
+                            <li>Todas las contiendas judiciales que no tengan una tramitación especial serán
+                                sustanciadas y decididas en proceso de conocimiento.</li>
+                            <li>Cuando las leyes especiales remitan al juicio o proceso sumario o sumarísimo, se
+                                entenderá que el litigio tramitará conforme al procedimiento del juicio de conocimiento,
+                                sin perjuicio de la concentración de actos conforme lo previsto en el Art. 2 inc. f) de
+                                este Código.</li>
+                        </ul>
+                        <p>En resumen, es un proceso subsidiario que solo procede cuando no existan disposiciones
+                            epeciales.</p>
+                    </dd>
+                    <dt>Requisitos de la Demanda (Art. 156)</dt>
+                    <dd>
+                        <p>Como primer punto debemos saber que la demanda debe ser por escrito y contener las siguientes
+                            partes:</p>
+                        <ol>
+                            <li>Datos del actor</li>
+                            <li>Datos del demandado</li>
+                            <li>Objeto</li>
+                            <li>Hechos</li>
+                            <li>Instrucción de parte (Ofrecimiento y acompañamiento de prueba)</li>
+                            <li>Derecho</li>
+                            <li>Eventual solicitud de declaración de inconstitucionalidad</li>
+                            <li>Petitorio</li>
+                        </ol>
+                        <p><b>Datos del actor:</b> Basicamente deben indicarse todos los datos que sean relevantes para
+                            identificar la persona del actor, su capacidad procesal y personeria jurídica (Nombres,
+                            edad, estado civil, entre otros).</p>
+                        <p><b>Datos del demandado:</b> Al igual que con el actor, deben brindarse todos aquellos datos
+                            que sirvan para poder identificarlo y localizarlo, en la medida que se conozcan.
+                            Esencialmente debe brindarse el nombre y domicilio, los cuales pueden, en caso de
+                            desconocerse, obtenerse mediante diligencias preliminares o solicitando diligencias en la
+                            demanda para poder conocerlos.</p>
+                        <p><b>Objeto:</b> Consiste en la designación precisa de lo que se demanda, de la pretensión, con
+                            indicación del valor de lo reclamado o su apreciación en caso de bienes (por ejemplo,
+                            indemnización, restitución de bienes, desalojos, ejecución contractual, entre otros).</p>
+                        <p><b>Hechos:</b> Consiste en la narración de la plataforma factica sobre la cual se funda y
+                            justifica el derecho solicitado o la pretensión, debiendo unicamente declararse aquellos que
+                            sean juridicamente relevantes a los fines de la pretensión, conforme el derecho que se
+                            invoca. También deben ser controvertidos y conducentes.</p>
+                        <p><b>Instrucción de parte:</b> Primero hay que diferenciar entre el ofrecimiento y el
+                            acompañamiento de la prueba.</p>
+                        <p>En cuanto al ofrecimiento, podemos decir que consiste en el acto procesal de detallar en la
+                            demanda toda aquella prueba que se proponga para poder demostrar los hechos que fundan la
+                            pretensión. Estos medios probatorios son ofrecidos porque se encuentra pendiente su
+                            producción. Como regla general, en la demanda y la contestación de la demanda deben
+                            ofrecerse todos los medios probatorios, caso contrario, posteriormente no puede ofrecerse
+                            nuevos medios probatorios, exceptuando los casos de introducción de nuevos hechos o la
+                            inversión de la carga probatoria. Para terminar, el modo en que se ofrece es detallando el
+                            medio probatorio y las diligencias necesarias para su posterior producción.</p>
+                        <p>Respecto del acompañamiento, el mismo solamente puede darse en aquellos medios probatorios
+                            que ya se encuentren producidos con anterioridad a la apertura de la instancia o
+                            interposición de la demanda. Por lo tanto, únicamente puede acompañarse la prueba
+                            instrumental, informativa y pericial que se encuentre en poder del actor. En caso de
+                            encontrarse producida pero en poder de terceros, entonces únicamente podrá ofrecerse
+                            describiendo su contenido y el lugar donde se encuentre o la persona en cuyo poder este.</p>
+                        <p><b>Derecho:</b> El derecho debe ser expuesto de manera sucinta por el actor y oportunamente
+                            por el demandado, detallando únicamente aquel que sea necesario para fundar el objeto de la
+                            pretensión. Pueden ser citaciones normativas, doctrinarias o jurisprudenciales, indicando
+                            los datos necesarios que permitan su constatación.</p>
+                        <p><b>Eventual declaración de inconstitucionalidad:</b> En caso de que se pretenda la
+                            declaración de inconstitucionalidad de alguna norma, entonces debe cumplirse con los
+                            siguientes requisitos, bajo sanción de darse por rechazado el planteo por considerarselo
+                            abstracto:</p>
+                        <ul>
+                            <li>Norma atacada</li>
+                            <li>Fundamentos concretos de la solicitud</li>
+                            <li>Normas consitucionales violadas</li>
+                            <li>Los antecedentes doctrinales y jurisprudenciales, en caso de haberlos</li>
+                            <li>La solución pretendida</li>
+                        </ul>
+
+                        <p><b>Petitorio:</b> El mismo representa la manifestación del impulso procesal de la parte
+                            actora, por lo cual debe ser hecha en términos claros, precisos y positivos.</p>
+                    </dd>
+                    <dt>Subsanación de defectos (Art. 157 y 164)</dt>
+                    <dd>
+                        <p>Una vez interpuesta la demanda, el tribuanl se encarga de verificar si se ha cumplido con los
+                            requisitos exigidos por ley. Consiste en un control de admisibilidad formal, por lo que en
+                            caso de incumplimiento de algún recaudo, se resolverá por auto la posibilidad de subsanar
+                            los defectos y omisiones cometidas en el plazo de 3 días. En caso de no cumplir, la
+                            presentación será desestimada sin más sustanciación, procediendo el archivo de las
+                            actuaciones y la devolución de la documentación acompañada.</p>
+                        <p>Para terminar, es oportuno considerar la regla establecida por el art. 164, que permite
+                            realizar las modificaciones o ampliaciones necesarias siempre y cuando no hayan sido
+                            notificadas a la contraparte.</p>
+                    </dd>
+
+                    <dt>Improponibilidad de la demanda (Art. 159)</dt>
+                    <dd>
+                        <p>En caso de que se estime que la demanda es manifiestamientamente improponible, previa vista
+                            la Ministerio Público Fiscal, la rechazará sin más, expresando los fundamentos de su
+                            decisión por auto apelable.
+                        </p>
+                        <p>A su vez, en caso de que exista prejudicialidad o de no haberse agotada la instancia previa,
+                            el tribunal ordenará la suspensión del procedimiento hasta que la instancia prejudicial sea
+                            finalizada o cumplida</p>
+                        <p>En resumen, mediante este instituto se realiza un control de los recuados intrínsecos o de
+                            procedencia de la acción / pretensión deducidas. De esta manera, se cumple con un control
+                            extrinseco e intrinseco de procedencia de la demanda.</p>
+                        <p>Cabe aclarar que este control de fundabilidad a diferencia del control formal, opera con
+                            elementos que corresponden al derecho material.</p>
+                        <p>En cuanto al concepto de improponibilidad, podemos decir que fuera de los supuestos de
+                            inhabilidad formal de la demanda, consiste en un rechazo in limine sin sustanciación acerca
+                            de la fundabilidad o merito propuesto por la demanda. Dicho rechazo es por falta de
+                            fundamentos o por carecer de un interés tutelado por el ordenamiento, buscandose de esta
+                            manera evitar un proceso inútil.</p>
+                        <p>En sí son pretensiones donde falta un interés jurídicamente protegido, ya sea porque el
+                            objeto o la causa son ilícitos, irrelevantes o se encuentran excentos de tutela.</p>
+                    </dd>
+                    <dt>Traslado de la demanda (Art. 160)</dt>
+                    <dd>
+                        <p>Una vez presentada la demanda o subsanada la misma, se corre traslado de la misma al
+                            demandado con citación y emplazamiento de 20 días para que comparezca y responda.</p>
+                        <p>Cabe aclarar que a los fines de evitar la declaración de rebeldía basta con que comparezca y
+                            constituya domicilio procesal, es decir, no es necesario que responda, basta con que se
+                            presente personalmente o por medio de representante y denuncie un domicilio procesal.</p>
+                    </dd>
+                    <dt>Contestación de la demanda (Art. 161)</dt>
+                    <dd>
+                        <p>En síntesis cumple con los mismos requisitos formales que la demanda, sin embargo, debe o
+                            puede
+                            contener lo siguiente:</p>
+                        <ul>
+                            <li>Reconocimiento o negación categórica de hechos, instrumentos o comunicaciones</li>
+                            <li>Oposición de todas las defensas</li>
+                            <li>Hechos invocados como fundamento de la defensa</li>
+                            <li>Prueba en los mismos terminos que se exige para el actor</li>
+                            <li>Derecho en los mismos terminos que se exige para el actor</li>
+                            <li>Declaración de inconstitucionalidad en los mismos terminos que se exige para el actor
+                            </li>
+                        </ul>
+                        <p>Ahora bien, en concreto hay que considerar lo siguiente:</p>
+                        <p><b>Reconocimiento o negacion categórica:</b> La misma debe ser hecha respecto de los hechos
+                            que se le imputan al demandado, los instrumentos que se le atribuyan autoria y respecto de
+                            comunicaciones que se consideren debidamente recepcionadas. En caso de que no se manifieste
+                            categoricamente, es decir, guarde silencion o sus respuestas sean ambiguas o evasivas,
+                            entonces se presumirá como verdaderos los hechos narrados por el actor, como así también
+                            tendrá lugar la autenticidad de los documentos o la recepción de comunicaciones.</p>
+                        <p>Una excepción a esta regla puede ser el caso de los sucesores o del defensor público en caso
+                            de ausencia, quienes podrán contestar en expectativa, es decir, manifestar ignorar la
+                            verdad, autenticidad o recepción, según corresponda, atando su contestación al resultado de
+                            la sustanciación.</p>
+                        <p>Sin embargo, cabe aclarar que para el caso de los sucesores, si logra demostrarse que la
+                            ignorancia era simulada, entonces se le aplicarán las costas de las diligencias realizadas
+                            para probar lo alegado por el actor (verdad, autenticidad o recepción)</p>
+                        <p><b>Oposición de defensas:</b> Por defensas debemos considerar todos aquellos argumentos
+                            jurídicos esgrimidos para oponerse y lograr impedir o extinguir la pretensión del actor.
+                            Estas defensas pueden ser sustanciales, es decir, que ataquen al derecho alegado por el
+                            actor o procesales, como lo son las excepciones de previo y especial pronunciamiento.</p>
+                        <p><b>Hechos:</b> Al igual que el actor, las circunstancias de hecho alegadas deben ser
+                            pertinentes, conducentes, jurídicamente relevantes y controvertidas, pero con la siguiente
+                            salvedad.</p>
+                        <p><b>"En particular, corresponde la prueba de los hechos constitutivos a quien los invoca como
+                                base de su pretensión; las de los hechos extintivos e impeditivos, a quien los invoca
+                                como base de su resistencia.- Art. 175"</b></p>
+                        <p>Del extracto podemos considerar que los hechos alegados por el demandado deben ser aquellos
+                            que busquen extinguir o impedir la admisión de la pretensión, los cuales son base de la
+                            resistencia o fundamento de su defensa.</p>
+                        <p>Respecto de los demas elementos no es necesario hacer mayores precisiones debido a que siguen
+                            las reglas impuestas para la demanda.</p>
+                    </dd>
+                    <dt>Traslado del responde (Art. 165)</dt>
+                    <dd>
+                        <p>Así como ocurre con el traslado de la demanda, se debe realizar el traslado de la
+                            contestación o eventual reconvencion al actor.</p>
+                        <p>Durante esta oportunidad, el actor podrá contestar la reconvención, las excepciones previas
+                            deducidas en su contra o ampliar su ofrecimiento de prueba respecto de los nuevos hechos
+                            introducidos por el demandado. Dentro de la contestación, debe manifestarse categoricamente
+                            respecto de la autenticidad de los documentos o la recepción de comunicaciones que se le
+                            atribuyan.</p>
+                        <p>A su vez, también puede deducir la falta de presupuestos procesales del demandado.</p>
+                        <p>El plazo para hacerlo es de 10 días.</p>
+                        <p>Cabe aclarar que pasada esta etapa se produce la traba de la litis.</p>
+                    </dd>
+                    <dt>Nuevas pruebas, nuevos hechos... (Art. 167)</dt>
+                    <dd>
+                        <p>Como se vió, los momentos para alegar hechos u ofrecer pruebas son esencialmente 2: La
+                            demanda y en la contestación de la misma.</p>
+                        <p>Eventualmente, también puede hacerse durante el traslado del responde respecto de los hechos
+                            nuevos o en caso de la distriubcion de la carga de la prueba (Art. 166), sin embargo, estos
+                            casos son consecuencia directa de actos procesales concretos.</p>
+                        <p>Por lo tanto, si tuviesemos que hablar de una excepción a dichos momentos para ofrecer nueva
+                            prueba o alegar nuevos hechos, debemos remitirnos al art. 167, el cual permite hacerlo con
+                            las siguientes consideraciones:</p>
+                        <ul>
+                            <li>Nueva Prueba: Solamente si se presta juramente de no haberlos conocido antes y aún no se
+                                haya fijado la fecha para la audiencia final.</li>
+                            <li>Hechos Nuevos y su prueba: Dentro del mismo plazo puede alegarse hechos nuevos y su
+                                correspondeinte prueba.</li>
+                        </ul>
+                        <p><b>Tramitación:</b> Se hace mediante incidente (a pesar de no ser una cuestión accesoria como
+                            los requiere la naturaleza de estos actos), dandose un traslado a la contraria por el plazo
+                            de 5 días.</p>
+                        <p>La contraria debe ajustar su contestación a lo establecido para la contestación de la demanda
+                            (Art. 161 i.1), pudiendo ofrecer contraprueba para desvirtuar el hecho nuevo o las nuevas
+                            pruebas alegadas.</p>
+                        <p>Ahora bien...:</p>
+                        <ul>
+                            <li>5 días antes de la audiencia inicial: El tribunal se pronuncia sobre la admision o el
+                                rechazo de la nueva prueba o nuevo hecho durante la celebración de la audiencia.</li>
+                            <li>Posterior a la celebración de la audiencia y antes de la fijación de la audiencia final:
+                                El tribunal se pronuncia mediante auto</li>
+                        </ul>
+                        <p><b>Nota:</b> Este articulo resulta ser algo confuso debido a que durante la misma audiencia
+                            se determina
+                            la fecha en la cual se celebrará la audiencia final, por lo cual, es algo contradictorio
+                            afirmar que pueden alegarse hechos u ofrecerse prueba nueva posteriormente, sin embargo, de
+                            acuerdo a lo establecido por la acordada, el hecho de que se haya fijado el plazo de la
+                            audiencia final no importa la perdida de la facultad de ofrecer nueva prueba, por lo que de
+                            alguna manera se salva la contradicción.</p>
+                    </dd>
+                </dl>
+            </section>
+
+            <section id="auInicial">
+                <h3>Audiencia Inicial</h3>
+                <dl>
+                    <dt>Procedencia (Art. 172)</dt>
+                    <dd>
+                        <p>Es importante considerar los casos en los cuales no procede la audiencia inicial, los cuales
+                            son dos:</p>
+                        <ul>
+                            <li>Consideración de las constancias obrantes como suficientes para dictar una resolución
+                            </li>
+                            <li>Declaración de la cuestión como de puro derecho</li>
+                        </ul>
+
+                        <p>El motivo de la realización de la audiencia inicial es principalmente organizar un plan de
+                            trabajo que permita proceder con el periodo probatorio, por lo que resulta lógico determinar
+                            que no proceda en los casos en que no sea necesario realizar otras actividades probatorias.
+                        </p>
+                        <p>En caso de declararse la improcedencia de la audiencia, entonces se procederá a dictar
+                            sentencia en el estado en que se encuentre la causa.</p>
+                        <p>Esta declaración se hace por auto apelable con efecto suspensivo.</p>
+                        <p>Ahora bien, en caso de que el tribunal requiera la producción de la prueba ofrecida o
+                            considere que la cuestión no es de puro derecho, habiendo hechos controvertidos y
+                            conducentes, de oficio o a pedido de parte señalará el día y hora para realizar la audiencia
+                            inicial, la que deberá realizarse en el plazo de 20 días habiles (según acordada),
+                            siguientes a la traba de la litis.
+                            Las notificación se hace por cedula al domicilio real, electronico y procesal.
+                        </p>
+                    </dd>
+
+                    <dt>Comparecencia:</dt>
+                    <dd>
+                        <ul>
+                            <li>Regla General: Forma Personal</li>
+                            <li>Excepcion: Por representación</li>
+                        </ul>
+
+                        <p>En cuanto a la excepción establecida, la misma solo procede en tres supuestos:</p>
+                        <ul>
+                            <li>Cuando por previsión legal y orden judicial no sea posible la presencia personal
+                                simultanea de ambos litigantes, o sea inconveniente por razones fundadas</li>
+                            <li>Cuando se aleguen motivos fundados, quedando sujeto a decisión judicial</li>
+                            <li>En caso de personas incapaces o personas jurídicas (Se excluye a las personas con
+                                capacidad restringida, quienes deben concurrir acompañadas por su apoyo)</li>
+                        </ul>
+                        <p>Los representantes que comparezcan en estas circunstancias deben hacerlo con instrucciones
+                            suficientes respecto de la posibilidad de conciliar o para desarrollar debidamente la
+                            audiencia.</p>
+                        <p><b>Incomparecencia:</b></p>
+                        <p>La incoparecencia en caso de ser justificada permite diferir por única vez la celebración de
+                            la audiencia. Sin embargo, en caso de ser injustificada produce los siguientes efectos:</p>
+                        <ul>
+                            <li>No se suspende la realización de la audiencia, siendo la misma realizada con quien
+                                concurra</li>
+                            <li>Se puede tener por desistida la prueba ofrecida por el incopareciente, que no esté hasta
+                                ese momento incorporada al proceso, salvo la instrumental que se encuentre en poder de
+                                terceros.</li>
+                            <li>Las partes quedan notificadas de todas las decisiones en forma simple</li>
+                            <li>Concluida la audiencia, el incompareciente no podrá posteriormente plantear cuestión
+                                alguna respecto de las resoluciones que se pronuncien en el curso de la audiencia.</li>
+                        </ul>
+                        <p>Para terminar, en caso de Incomparecencia de ambas partes, se fijará por única vez una nueva
+                            audiencia. De reiterarse, se dicta el sobreseimiento de la causa y se ordena el archivo de
+                            las actuaciones.</p>
+
+                    </dd>
+                    <dt>Contenido de la audiencia Inicial (Art. 173):</dt>
+                    <dd>
+                        <p>Se debe considerar y tener siempre presente que la audiencia inicial es multiproposito e
+                            instrumental, por lo que se busca organizar el periodo de sustanciación de causa y preparar
+                            todo para la audiencia final.</p>
+                        <p>La misma debe ser dirigida en forma indelegable y bajo pena de nulidad por el juez de la
+                            causa.</p>
+                        <p>A continuación podemos ver las actividades que se desarrollan durante la misma:</p>
+                        <p><b>Conciliación:</b> Se busca que las partes voluntariamente concilien respecto del fondo de
+                            la cuestion, ya sea de manera total o parcial.</p>
+                        <p><b>Rectificación de errores materiales en los escritos iniciales.</b></p>
+                        <p><b>Dictar medidas para sanear el proceso o presupuestos procesales faltantes que no hayan
+                                sido deducidos por las partes.</b></p>
+                        <p><b>Fijación definitiva de los hechos objeto del proceso y de la prueba</b></p>
+                        <p><b>Pronunciamiento sobre la admisibilidad de la prueba ofrecida y orden de las medidas
+                                necesarias para su producción</b></p>
+                        <p><b>Rechazo de oficio de la prueba prohibida por la ley y la notoriamente impertinente e
+                                innecesaria:</b> El rechazo se hace por auto apelable de forma abreviada y sin efecto
+                            suspensivo.</p>
+                        <p><b>Designación de peritos</b></p>
+                        <p><b>Se puede ordenar prueba de oficio para una mejor busqueda de la verdad:</b> Vease art. 46
+                            i. 5: "Disponer las medidas idóneas para esclarecer la verdad de los hechos controvertidos,
+                            mantener la igualdad de los litigantes, propender a una más rápida y económica tramitación
+                            del proceso y asegurar una solución justa."</p>
+                        <p><b>Fijar el plazo de producción de toda la prueba que no deba rendirse en la audiencia
+                                final:</b> Cabe destacar que el plazo solo puede ser ampliado prudencialmente a pedido
+                            de parte por única vez.</p>
+                        <p><b>Fijación de común acuerdo de la fecha de realización de la audiencia final</b></p>
+                    </dd>
+                </dl>
+            </section>
+
+            <section id="auFinal">
+                <h3>Audiencia Final</h3>
+                <dl>
+                    <dt>Procedencia</dt>
+                    <dd>
+                        <p>Se celebra una vez producida la totalidad de la prueba que no pueda recibirse oralmente o que
+                            haya caducado.</p>
+                        <p>En cuanto a su fecha de producción, la misma se fija prudencialmente en la audiencia inicial,
+                            sin embargo, en caso de no haberse fijado, debe fijarse dentro de un plazo mínimo de 10 días
+                            y un máximo de 20 días.</p>
+                    </dd>
+                    <dt>Celebración</dt>
+                    <dd>
+                        <p>Se realizará con los testigos y peritos que correspondan, los cuales deben ser notificados
+                            por las partes. A su vez, es carga del litigante que ofreció la prueba verificar que las
+                            notificaciones no fracasen por cambio de domicilio, y en caso de haber un nuevo domicilio,
+                            deberán denunciarlo hasta 5 días antes de la celebración de la audiencia, caso contrario, se
+                            tendrá por desistida dicha prueba en caso de incomparecencia</p>
+                        <p>Por otra parte, el Tribunal es responsable de citar a los demás interesados, como lo son los
+                            amigos del Tribunal, el Ministerio Público Fiscal o Pupilar.</p>
+                        <p>En caso de renuncia al mandato, sólo se notificará al mandante y tendrá efecto una vez
+                            concluida la audiencia, no pudiendo utilizarse como motivo de suspensión de la misma.</p>
+                        <p><b>Suspensión de la audiencia:</b> Solo puede suspenderse por el plazo de 15 días en los
+                            siguientes casos:</p>
+                        <ul>
+                            <li>En caso de que tenga que resolverse alguna cuestión incidental que por su naturaleza no
+                                pueda decidirse en la misma audiencia</li>
+                            <li>Cuando el tribunal no se encuentre integrado por razones justificadas</li>
+                            <li>Cuando no comparecieren los testigos o peritos debidamente notificados o faltare agregar
+                                algún elemento cuya intervención o agregación sea considerada indispensable</li>
+                        </ul>
+                        <p>De darse estos casos, se fijará el día y hora de la nueva audiencia, valiendo como
+                            notificacion a los comparecientes.</p>
+                        <p>A los incomparecientes injustifiados se los tendra por notificados y los que esten
+                            justificados deberan ser notificados por las partes.</p>
+                    </dd>
+                    <dt>Realización (Art. 201)</dt>
+                    <dd>
+                        <p>El debate será oral, público y continuo. Excepcionalmente, cuando se considere inconveniente
+                            la publicidad o que afecta al orden público, por auto, puede disponerse que se realice a
+                            puertas cerradas.</p>
+                        <p>El día y hora fijados, se declarará abierto el acto con las partes que hayan concurrido y se
+                            procederá de la siguiente manera:</p>
+                        <p><b>Metodo Alternativo de Resolución de Conflictos</b></p>
+                        <p><b>Comparecencia persona:</b> Las partes deben comparecer personalmente, en caso de no
+                            hacerlo, deben otorgar instrucciones expresas para conciliar, bajo apercibimiento de perdida
+                            de los honorarios.</p>
+                        <p><b>Vista de cuasa:</b> Fracasado el acuerdo, se dará lectura de las actuaciones hasta el
+                            momento.</p>
+                        <p><b>Actuación del juez:</b> El juez deberá dirigir el debate, con todo lo que ello conlleva,
+                            procurando ademas obtener de la prueba oral los elementos necesarios para establecer la
+                            verdad de los hechos.</p>
+                        <p><b>Prueba Testimonial:</b> El tibunal y las partes pueden interrogar a los testigos, primero
+                            respetando el pliego de preguntas y luego de manera libre, sin otra limitación que el objeto
+                            mismo del proceso. Excepcionalmente, si se considera prudente puede prorrogarse hasta un
+                            máximo de 5 días.</p>
+                        <p><b>Alegatos:</b> Rendida la prueba oral, las partes se expedirán sobre el mérito total de la
+                            causa pudiendo cada parte disponer de veinte (20) minutos para su alegato. El plazo podrá
+                            ampliarse por el Tribunal cuando lo justifique la complejidad del caso. A petición de la
+                            contraria, podrá otorgarse por una sola vez cinco (5) minutos a cada parte para ejercer el
+                            derecho a réplica y súplica. Podrá el Tribunal a pedido de parte recibir memorial o admitir
+                            su presentación por escrito en un plazo común no mayor de cinco (5) días. Las pruebas y
+                            constancias podrán ser consultadas en el Tribunal o electrónicamente. No será motivo de
+                            préstamo del expediente papel el tener que formular alegato por escrito.</p>
+                        <p><b>Cierre del debate:</b> Formulados los alegatos, el Tribunal declarará cerrado el debate y
+                            llamará inmediatamente a autos para sentenciar. El plazo de pronunciamiento es de 30 días a
+                            contar desde la ejecutoria del llamamiento.</p>
+                        <p>La audiencia no terminará hasta que no sean ventiladas las cuestiones propuestas y se dicte
+                            el fallo.</p>
+                        <p><b>Acta (Art. 202):</b> Se levantará acta de lo sustancial de la audiencia consignando nombre
+                            de los comparecientes, de los peritos y testigo. Podrá consignarse alguna circunstancia
+                            especial a pedido de partes siempre que el Tribunal lo considere pertinente.</p>
+
+
+                    </dd>
+                </dl>
+
+            </section>
+
+
+
+            </dl>
+        </article>
+        <article id="pConocimientoEsp">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum veritatis assumenda possimus. Sequi id
+                aliquam amet cum atque? Perspiciatis sequi tempore consectetur necessitatibus repellendus recusandae
+                eligendi numquam incidunt id obcaecati?Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Asperiores vitae officiis quam incidunt beatae quibusdam delectus inventore dolorum voluptatibus,
+                maiores ratione sit libero eligendi excepturi enim tempora quia fugit quidem.</p>
+        </article>
+        <article id="pMonitorio">
+            <h3>Preparación de la Vía</h3>
+            <section>
+                <dl>
+                    <dt>Desalojo</dt>
+                    <dd>
+                        <p>Según el art. 237, el proceso de desalojo se puede aplicar a:</p>
+                        <ul>
+                            <li>Locación Inmobiliaria</li>
+                            <li>Usufructo</li>
+                            <li>Comodato</li>
+                        </ul>
+                        <p>Para el caso de la locación se puede acceder por falta de pago o vencimiento, mientras que para el usufructo o comodato se debe optar unicamente por vencimiento de contrato.</p>
+                        <p>Los contratos deben estar debidamente instrumentados y su firma debe estar reconocida, certificada o surgir de instrumento público, conteniendo el derecho en que se funda la acción y la constancia de intimación fehaciente de desocupación, denunciandose la existencia de sublocatarios u ocupantes.</p>
+                        <p>La sentencia ordena el desahucio o desocupación del inmueble en 15 días.</p>
+                        <p>La notificación se hace al domicilio real o especial por medio de oficial notificador.</p>
+                        <p>Al hacerse conocer la sentencia se emplaza para que ejerzan la oposición correspondiente.</p>
+                    </dd>
+                </dl>
+            </section>
+        </article>
+        <article id="pConstitucional">
+            <details>
+                <summary>Indice</summary>
+                <div>
+                    <a href="#amparo">Acción de Amparo</a><a href=""></a><a href=""></a><a href=""></a>
+                </div>
+            </details>
+            <section id="amparo">
+                <h3>Acción de Amparo</h3>
+                <dl>
+                    <dt>Procedencia (Art. 219)</dt>
+                    <dd>
+                        <p><b>Requisitos:</b></p>
+                        <ul>
+                            <li>Hecho, acción u omisión</li>
+                            <li>Autores: Administración Pública Provincial o Municipal, Personas Humanas o Jurídicas
+                                Particulares</li>
+                            <li>De forma actual o inminente</li>
+                            <li>Ostensible Arbitrariedad o Ilegalidad</li>
+                            <li>Alteración, amenaza, lesion, restricción o cualquier modo que impida el normal ejercicio
+                                de derechos</li>
+                            <li>Se exceptua el derecho a la libertad física</li>
+                        </ul>
+                        <p>A su vez, también debe considerarse lo siguiente:</p>
+                        <ul>
+                            <li>Solo procede cuando se hayan agotado las acciones administrativas o judiciales previstas
+                                como originarias para la impugnación del acto</li>
+                            <li>Cuando no existan otras vías administrativas o judiciales para impugnar el acto
+                                arbitrario o ilegal</li>
+                            <li>Cuando la necesidad de agotar la vía admisnitrativa, cause o pueda causar un daño grave
+                                e irreparable</li>
+                            <li>La acción procede aún cuando el hecho, acto y omisión tachado de arbitrario o ilegal,
+                                encuentre sustento en una norma de caracter general <b>notoriamente</b> contraria a la
+                                Constitucion. De ser así debe declararse la incosntitucional de la norma que sirve de
+                                fundamento al hecho, acto y omisión.</li>
+                        </ul>
+                        <p><b>Casos en los que no procede:</b> No será admisible cuando:</p>
+                        <ul>
+                            <li>El acto impugnado emanare de un órgano del Poder Judicial, en ejercicio de la función
+                                jurisdiccional</li>
+                            <li>La intervención judicial comprometiera directa o indirectamente la regularidad,
+                                continuidad y eficacia de la prestación de un servicio público esencia.</li>
+                        </ul>
+                        <p><b>Legitimación Activa (Art. 220):</b> La acción puede interponerse por toda persona humana o
+                            jurídica, por sí o por intermedio de sus representantes legales o convencionales, siempre y
+                            cuando sean titulares del derecho constitucional afectado por la actuación u omisión,
+                            público o privada, arbitaria o ilegal</p>
+                        <p>En caso de impedimento del titular del derecho constitucional afectado, podrá deducir la
+                            acción de amparo un tercero en su nombre, sin perjuicio de la responsabilidad en que incurra
+                            si hubiera actuado en forma maliciosa.</p>
+                        <p>Para el caso del amparo por ausencia de reglamentación, sólo podrán articular la acción de
+                            amparo las personas que resulten directamente beneficiarias de la ley o norma de carácter
+                            general no reglamentada, sin perjuicio de lo dispuesto en el anteriormente.</p>
+                        <p><b>Competencia (Art. 221):</b> Serán competentes para entender en las acciones de amparo, el
+                            Juez de primera instancia con competencia en lo civil y comercial, con competencia
+                            territorial en el lugar en que el hecho, acto u omisión que se impugne se haya ejecutado o
+                            deba ejecutarse. No es admisible la recusación sin expresión de causa. Cuando se promuevan
+                            varias acciones de amparo en razón de un mismo hecho, acto u omisión, será competente para
+                            conocer de ellas el Juez que hubiese prevenido. Se aplicarán, en lo pertinente, las normas
+                            sobre acumulación de acciones y procesos previstas en este Código, siempre que no cause
+                            grave retardo en la sustanciación de los procedimientos anteriores.</p>
+                        <p>Cuando se promuevan varias acciones de amparo en razón de un mismo hecho, acto u omisión,
+                            será competente para conocer de ellas el Juez que hubiese prevenido. Se aplicarán, en lo
+                            pertinente, las normas sobre acumulación de acciones y procesos previstas en este Código,
+                            siempre que no cause grave retardo en la sustanciación de los procedimientos anteriores.</p>
+                    </dd>
+
+                    <dt>Clases de amparo (Art. 219)</dt>
+                    <dd>
+                        <p>En nuestra legislación existen tres supuestos:</p>
+                        <p><b>Amparo Generico:</b> Procede contra todo hecho, acción u omisión de organos o agentes de
+                            la administración pública provincial o municipal, como así también, de personas humanas o
+                            jurídicas que, en forma actual o inminente, con ostensible arbitrariedad o ilegalidad,
+                            alteren, amenacen o de cualquier modo impidan el normal ejercicio de derechos expresa o
+                            implícitamente reconocidos por las Constituciones Nacional o Provincial, un tratado o una
+                            ley, con exclusión del derecho a la libertad...</p>
+                        <p>El plazo para interponerlo es de 15 días <b>corridos</b> a partir de la fecha en que el
+                            afectado tomó conocimiento del hecho, acto y omisión que repute violatorio de sus derechos
+                            constitucionales. Excepcionalmente cuando la conducta lesiva se prolongue en el tiempo será
+                            posible interponerla en todo momento mientras subsista la afectación.</p>
+                        <p><b>Amparo por ausencia de reglamentación:</b> Procede contra la omision del Poder Ejecutivo
+                            Provincial en reglamentar las leyes dentro de los plazos que estas determinen.</p>
+                        <p>El plazo para interponerlo dependera del plazo establecido por la misma ley para su
+                            reglamentación. En caso de no haberse fijado un plazo, la acción podrá iniciarse en
+                            cualquier tiempo, transcurridos 6 meses a contar de la fecha de promulgación de la misma.
+                        </p>
+                        <p><b>Amparo por Mora o Urgimiento:</b> Procede contra la omisión de la administración pública
+                            provincial o municipal en resolver las peticiones formulados por los administrados dentro de
+                            los terminos legales, siempre que la demora sea excesiva y resulte perjudicial para los
+                            derechos de los accionantes.</p>
+                        <p>El plazo para su interposición es de 30 días <b>corridos</b> que se computarán a partir del
+                            vencimiento de los terminos legales previstos para resolver la peticion. En caso de no
+                            haberse previsto un plazo legal, la acción podra articularse despés de haber transcurrido 30
+                            días corridos desde que se formuló la petición y dentro de los 30 días subsiguientes</p>
+                    </dd>
+
+                    <dt>Trámite (Art. 222)</dt>
+                    <dd>
+                        <p>Una vez interpuesto, el juez debe proveerla dentro de las 24 horas de recibida la demanda,
+                            aún en caso de que sean inhabiles.</p>
+                        <p>Una vez proveido, hay que distinguir entre los casos donde el demandado es la administración
+                            pública o un particular:</p>
+                        <ul>
+                            <li>Administración Pública: El juez requerirá un informe circunstanciado acerca de los
+                                antecedentes de las medidas impugnadas y de sus fundamentos, el que deberá ser evacuado
+                                en un plazo perentorio de 3 días</li>
+                            <li>Particulares: Se les correrá traslado de la demanda por un plazo de 3 días </li>
+                        </ul>
+                        <p>En el amparo no proceden las siguientes actuaciones procesales:</p>
+                        <ul>
+                            <li>Excepciones previas</li>
+                            <li>Reconvenciones</li>
+                            <li>Incidentes</li>
+                        </ul>
+                        <p>El juez de oficio subsanará los vicios de procedimeinto que se produjeren, asegurando dentro
+                            de la naturaleza sumarísima de la acción de amparo, la vigencia plena del principio de
+                            contradicción.</p>
+                        <p><b>Pruba:</b> En caso de que exista la necesidad de producir prueba, se fijará una audiencia
+                            dentro del 3° día de evacuado el informe o contestada la demanda. La producción de la prueba
+                            se rige por las normas generales con las siguientes limitaciones:</p>
+                        <ul>
+                            <li>Testigos: Solo 3 por parte</li>
+                            <li>Prueba Informativa: Evacua en 2 días</li>
+                        </ul>
+                    </dd>
+                    <dt>Sentencia (Art. 222)</dt>
+                    <dd>
+                        <p><b>Plazo para dictar sentencia:</b> 5 días de estar en estado la causa.</p>
+                        <p>En caso de que se conceda el amparo, se notifica a las partes un mandamiento que debe
+                            contener lo que tienen que hacer o dejar de hacer y el plazo para cumplirlo, el cual no
+                            puede ser mayor a 2 días. En caso de deberse reglamentar una ley, debe determinarse un plazo
+                            prudencial para ello.</p>
+                        <p>El órgano o agente de la Administración Pública a quien el mandamiento se dirija, deberá
+                            cumplirlo sin que pueda oponer excusa alguna ni ampararse en la obediencia jerárquica.</p>
+                        <p>Tanto la notificación de la demanda como el mandamiento que haga cumplir la sentencia, se
+                            diligenciarán en el plazo de un 1 día debiendo arbitrarse los medios a tal fin.</p>
+                        <p>La sentencia de amparo deja subsistente el ejercicio de las acciones ordinarias que puedan
+                            corresponder a las partes. En otras palabras, la sentencia no causa estado o cosa juzgada.
+                        </p>
+                        <p><b>Apelación:</b> Tanto la sentencia como el auto que resuelva las medidas cautelares son
+                            apelables sin efecto suspensivo.</p>
+                        <p>El plazo para interponerlo es de 2 días que se computan desde que se notificaron las
+                            resoluciones, <b>debiendo fundarse en el mismo escrito de interposición.</b></p>
+                        <p>El recurso se acuerda o deniega en 1 día y se eleva en 1 día.</p>
+                        <p>De los fundamentos del recurso se corre traslado al apelado por el término de 2 días.
+                            Contestados los agravios y rendida la prueba, el tribunal dictará resolución dentro de los 5
+                            días de estar la causa en estado.</p>
+                    </dd>
+                    <dt>Reglas complementarias (Art. 222)</dt>
+                    <dd>
+                        <p>En cualquier estado de la instancia el Juez o Tribunal, a petición de parte y con el objeto
+                            de afianzar la garantía constitucional afectada y siempre que exista riesgo de daño
+                            irreparable, podrá ordenar las medidas innovativa o de no innovar idóneas, las que se
+                            cumplimentarán en forma inmediata, sin perjuicio de su ulterior notificación. En caso de
+                            hacerse lugar, el Juez o Tribunal exigirá la contracautela adecuada para responder de los
+                            daños que dichas medidas pudieran ocasionar. La solicitud deberá resolverse en el mismo día
+                            de su presentación.</p>
+                        <p>Ante la solicitud de cualquier medida contra hechos, acciones u omisiones de la
+                            Administración Pública, el Juez podrá correr vista por dos (2) días a la demandada y
+                            resolverá sin sustanciación, en el plazo de un (1) día de contestada la vista o vencido el
+                            término para hacerlo, aplicándose en las demás cuestiones las disposiciones de este Código.
+                        </p>
+                        <p>Los trámites relativos a las medidas previstas en este inciso, no suspenderán en ningún caso
+                            los procedimientos o términos de la acción principal, debiendo en su caso, disponerse la
+                            formación de pieza separada.</p>
+                    </dd>
+                    <dt>Acción de protección de datos (Art. 223)</dt>
+                    <dd>
+                        <p>Toda persona podrá interponer acción de amparo para tomar conocimiento de los datos a ella
+                            referidos y de su finalidad, que consten en registros o bancos de datos públicos, o los
+                            privados destinados a proveer informes, y en caso de falsedad o discriminación, para exigir
+                            la supresión, rectificación, confidencialidad o actualización de aquéllos. No podrá
+                            afectarse el secreto de las fuentes de información periodística en ningún caso.</p>
+                    </dd>
+
+                </dl>
+            </section>
+        </article>
+        <article id="rOrdinarios">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum veritatis assumenda possimus. Sequi id
+                aliquam amet cum atque? Perspiciatis sequi tempore consectetur necessitatibus repellendus recusandae
+                eligendi numquam incidunt id obcaecati?Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Asperiores vitae officiis quam incidunt beatae quibusdam delectus inventore dolorum voluptatibus,
+                maiores ratione sit libero eligendi excepturi enim tempora quia fugit quidem.</p>
+        </article>
+        <article id="rExtraordinarios">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum veritatis assumenda possimus. Sequi id
+                aliquam amet cum atque? Perspiciatis sequi tempore consectetur necessitatibus repellendus recusandae
+                eligendi numquam incidunt id obcaecati?Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Asperiores vitae officiis quam incidunt beatae quibusdam delectus inventore dolorum voluptatibus,
+                maiores ratione sit libero eligendi excepturi enim tempora quia fugit quidem.</p>
+        </article>
+        <article id="mPrecautorias">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum veritatis assumenda possimus. Sequi id
+                aliquam amet cum atque? Perspiciatis sequi tempore consectetur necessitatibus repellendus recusandae
+                eligendi numquam incidunt id obcaecati?Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Asperiores vitae officiis quam incidunt beatae quibusdam delectus inventore dolorum voluptatibus,
+                maiores ratione sit libero eligendi excepturi enim tempora quia fugit quidem.</p>
+        </article>
+        <article id="mPrueba">
+            <h3>Medios de Prueba</h3>
+            <details>
+                <summary>Índice</summary>
+                <div class="index">
+                    <a href="#codProcPr">Código Procesal (Arts. 174 a 199)</a>
+                    <a href="#rGral">Acordada 28690</a>
+                    <a href="#dPreliminares">Diligencias Preliminares</a>
+                    <a href="#introductorio">Periodo Introductorio</a>
+                    <a href="#auInicial">Audiencia Inicial</a>
+                    <a href="#auFinal">Audiencia Final</a>
+                </div>
+            </details>
+            <hr>
+
+            <section id="codProcPr">
+                <h3>Código Procesal (Arts. 174 a 199)</h3>
+
+                <h4 id="cXXXIV">CAPÍTULO III PERIODO PROBATORIO. AUDIENCIA INICIAL</h4>
+                <div class="arts">
+
+                    <p>Art 174° PRUEBA FUERA DE LA SEDE DEL TRIBUNAL.</p>
+
+                    <p>
+                        I.- Si las pruebas o algunas de ellas hubieran de recibirse necesariamente
+                        fuera de la sede del Tribunal, pero dentro del radio urbano del lugar, el Juez
+                        o un miembro del Tribunal colegiado, las recibirá personalmente en forma
+                        indelegable.
+                    </p>
+
+                    <p>
+                        II.- Si hubiera de serlo fuera del radio urbano, pero dentro de la
+                        circunscripción judicial, podrá trasladarse el Juez o un miembro del Tribunal
+                        Colegiado a recibirla o encomendar su recepción a un Juez de Paz, mediante
+                        oficio.
+                    </p>
+
+                    <p>
+                        La inspección judicial deberá ser realizada necesariamente por el Juez de la
+                        causa, salvo que deba practicarse fuera de la circunscripción judicial, en
+                        cuyo caso podrá ser delegada al Juez de igual clase y grado con jurisdicción
+                        en el lugar.
+                    </p>
+
+                    <p>
+                        III.- Si hubiera de serlo fuera de la circunscripción judicial pero dentro del
+                        país, se encomendará su recepción al Juez o Tribunal de igual grado y materia
+                        que tenga competencia en el lugar, mediante oficio.
+                    </p>
+
+                    <p>
+                        IV.- Si hubiera de serlo fuera del país, al Magistrado judicial que
+                        correspondiera, mediante exhorto. En este caso, quien ofreció la prueba deberá
+                        afianzar los gastos que la contraria debiera efectuar para vigilar su
+                        recepción.
+                    </p>
+
+                    <p>Art 175° CARGA DE LA PRUEBA.</p>
+
+                    <p>
+                        I.- En general, cada litigante debe aportar la prueba de los hechos que invocó
+                        y que no fueron reconocidos por la contraria.
+                    </p>
+
+                    <p>
+                        En particular, corresponde la prueba de los hechos constitutivos a quien los
+                        invoca como base de su pretensión; las de los hechos extintivos e impeditivos,
+                        a quien los invoca como base de su resistencia.
+                    </p>
+
+                    <p>
+                        II.- Es carga procesal de cada litigante producir las medidas de prueba que
+                        hubiese ofrecido, en cuanto dependa de su actividad. Podrá ser producida
+                        también por los demás litigantes.
+                    </p>
+
+                    <p>
+                        III.- Salvo la prueba que deba producirse en la audiencia final, la admitida
+                        que no se encontrará producida dentro del plazo fijado a los términos del Art.
+                        173 inc. g), caducará automáticamente.
+                    </p>
+
+                    <p>Art 176° MEDIOS DE PRUEBA.</p>
+
+                    <p>
+                        Son medios de prueba: los documentos, el dictamen e informe de peritos y
+                        expertos, la declaración de testigos, el examen judicial, reproducciones y
+                        experiencias y cualquier otro no prohibido por la ley en general o para casos
+                        particulares, que sea idóneo y pertinente.
+                    </p>
+
+                    <p>
+                        El juzgador podrá invocar las presunciones o indicios y los hechos notorios,
+                        aunque no hayan sido invocados.
+                    </p>
+
+                    <p>Art 177° PRUEBA INSTRUMENTAL.</p>
+
+                    <p>
+                        Los instrumentos públicos, privados y particulares no firmados ofrecidos como
+                        prueba, que no fueran observados oportunamente, se tendrán como auténticos, lo
+                        que se decidirá en la audiencia inicial.
+                    </p>
+
+                    <p>
+                        Cuando se hubieran acompañado copias simples o referencias de instrumentos
+                        conforme al Art. 156 inc. 6 se procederá en la siguiente forma:
+                    </p>
+
+                    <p>
+                        1) Si se tratare de actuaciones judiciales o administrativas, se solicitará su
+                        remisión y si no fuere legal o materialmente posible, el envío de testimonio
+                        del mismo o de sus partes pertinentes.
+                    </p>
+
+                    <p>
+                        2) Si se encontrare en poder de terceros, se les intimará para que lo
+                        presenten, pudiendo solicitar su oportuna devolución dejando testimonio en el
+                        expediente. Podrán negarse a su presentación si el instrumento fuere de su
+                        exclusiva propiedad y su exhibición pudiera ocasionarles perjuicio. El
+                        Tribunal resolverá la oposición con vista al litigante que ofreció la prueba,
+                        siguiendo el trámite señalado para los incidentes. Una vez resueltas las
+                        oposiciones que pudieran plantearse, el documento podrá ser extraído o
+                        testimoniado coactivamente.
+                    </p>
+
+                    <p>
+                        3) Si se encontrare en poder de la contraria, se le intimará para que lo
+                        presente en el plazo que el Tribunal señale. Si no lo presentare, sin negar
+                        poseerlo sin su culpa, el Tribunal podrá tener por exacto su contenido o los
+                        datos del mismo proporcionados por quien lo ofreció como prueba. La negativa a
+                        poseerlo será sustanciada como los incidentes.
+                    </p>
+
+                    <p>Art 178° IMPUGNACIÓN DE INSTRUMENTOS.</p>
+
+                    <p>
+                        I.- Cuando se impugne un instrumento público o privado, total o parcialmente,
+                        o se declare ignorar la autenticidad de un instrumento privado o particular no
+                        firmado, en caso del Art. 161 inc. II.1.b, conjuntamente, se darán los
+                        fundamentos de esa actitud, y si se tratare de impugnación, se solicitarán las
+                        medidas necesarias para comprobarla. Si el impugnante fuera el actor se dará
+                        vista al demandado. En el caso del segundo párrafo del inciso II), quien
+                        ofreció el instrumento debe probar su autenticidad.
+                    </p>
+
+                    <p>
+                        El cotejo de letras y dictamen de calígrafos, son medios de prueba que deberán
+                        siempre decretarse en estos casos.
+                    </p>
+
+                    <p>
+                        II.- Cuando se impugnare instrumentos privados o particulares no firmados
+                        atribuidos a terceros, deberán ser reconocidos ante el Tribunal dentro del
+                        plazo previsto en el Art. 175 inciso III. A tal fin, a petición del oferente,
+                        el tercero podrá ser emplazado a comparecer dentro del plazo que se le fije,
+                        bajo apercibimiento de sanciones conminatorias.
+                    </p>
+
+                    <p>
+                        III.-En la sentencia se resolverá lo que corresponda sobre la impugnación o
+                        desconocimiento, pudiendo disponerse hacer conocer el hecho al Tribunal en
+                        materia penal que correspondiere, por si la conducta de algunos de los
+                        litigantes configurara un delito.
+                    </p>
+
+                    <p>Art 179° ESTADO Y CONSERVACIÓN DE DOCUMENTOS.</p>
+
+                    <p>
+                        De todo instrumento que se presente se deberá extraer copia digital,
+                        devolviéndose el original al presentante, quien deberá conservarlo y exhibirlo
+                        en caso de serle requerido. En caso de que el Tribunal careciera de los medios
+                        técnicos para ello, el oferente deberá acompañar con el original copia en
+                        soporte digital en formato que garantice su inalterabilidad.
+                    </p>
+
+                    <p>
+                        Las copias simples, fotocopias y otras reproducciones de instrumentos, sólo
+                        valdrán como auténticas si no son observadas por la contraria.
+                    </p>
+
+                    <p>Art 180° DICTAMENES E INFORMES DE PERITOS Y EXPERTOS.</p>
+
+                    <p>
+                        I.- Cuando se ofrezca prueba de informe o de dictámenes de peritos o de
+                        expertos, habiéndose acompañado oportunamente los puntos sobre las cuales
+                        versará, estos auxiliares de la justicia serán designados en la forma
+                        establecida en este artículo.
+                    </p>
+
+                    <p>
+                        II.- Los peritos o expertos serán uno (1) o tres (3) según la importancia y
+                        complejidad del asunto, a criterio del Tribunal. Si fueran tres, deberán
+                        actuar y dictaminar conjuntamente, pudiendo, en caso de discrepancia, asentar
+                        cada uno su dictamen o informe, sobre los puntos en desacuerdo, pero dentro de
+                        un mismo escrito.
+                    </p>
+
+                    <p>
+                        III.- Idoneidad: Si la profesión estuviese reglamentada, el perito deberá
+                        tener título habilitante en la ciencia, arte, industria o actividad técnica
+                        especializada a que pertenezcan las cuestiones acerca de las cuales deba
+                        expedirse. En caso contrario, o cuando no hubiere en el lugar del proceso
+                        perito con título habilitante, podrá ser nombrada cualquier persona con
+                        conocimientos en la materia.
+                    </p>
+
+                    <p>
+                        IV.- Forma de designación. En caso de ser tres, cada parte propondrá uno y el
+                        Juez el tercero. Si fuere uno, el Juez invitará a las partes a designarlo de
+                        común acuerdo. Si hubiere discrepancia, se efectuará un sorteo de la lista
+                        correspondiente. Si no se hubiera conformado lista de la especialidad
+                        requerida, el Juez lo nombrará directamente.
+                    </p>
+
+                    <p>
+                        V.- Si la pericia hubiera sido ofrecida por alguno de los litigantes, admitida
+                        la misma, el oferente que no goce del beneficio de litigar sin gastos, deberá
+                        acreditar en el plazo de cinco días, el depósito de un importe equivalente al
+                        monto mínimo de honorarios previsto en el Art. 184. El incumplimiento de esta
+                        carga importará el desistimiento de la prueba sin necesidad de declaración
+                        alguna. Este importe será librado a favor del perito, a cuenta de honorarios,
+                        una vez presentado el informe o dictamen.
+                    </p>
+
+                    <p>
+                        VI.- El o los peritos designados, deberán aceptar el cargo en la forma, plazo
+                        y bajo el apercibimiento previstos en el Art. 19. En caso de dejarse sin
+                        efecto la designación por falta de aceptación, se procederá de oficio a
+                        designar por sorteo un nuevo perito.
+                    </p>
+
+                    <p>Art 181° CONSULTOR TÉCNICO.</p>
+
+                    <p>
+                        Sin perjuicio de la facultad de proponer perito, cada parte podrá designar un
+                        consultor técnico. Esta facultad no podrá ejercerse luego de concluida la
+                        audiencia inicial. Cuando los litisconsortes no concordaran en la designación
+                        del consultor técnico de su parte, el Juez sorteará uno entre los propuestos.
+                        El consultor técnico podrá ser reemplazado por la parte que lo designó; el
+                        reemplazante no podrá pretender una intervención que importe retrogradar la
+                        práctica de la pericia. Los honorarios del consultor técnico serán soportados
+                        exclusivamente por la parte que lo hubiere designado y no integrarán la
+                        condena en costas.
+                    </p>
+
+                    <p>Art 182° RECONOCIMIENTO O EXAMEN PREVIOS. ANTICIPO DE GASTOS.</p>
+
+                    <p>
+                        I.- El perito deberá comunicar al Tribunal fecha y hora para el reconocimiento
+                        o examen, si correspondiere, el que se llevará a cabo dentro de un plazo no
+                        mayor a diez (10) días desde la aceptación del cargo. En este caso se les
+                        notificará a las partes a domicilio, quienes podrán asistir a la diligencia
+                        acompañados de sus consultores técnicos en su caso y hacer las observaciones
+                        que creyeren necesarias. El Juez, de oficio o a pedido de parte, podrá limitar
+                        esta facultad de los litigantes, según el tipo de pericia de que se trate, en
+                        la medida que la misma puedan resultar afectados derechos personalísimos.
+                    </p>
+
+                    <p>
+                        II.- Previo a la elaboración del dictamen los peritos podrán solicitar el
+                        adelanto de los gastos necesarios para la labor, en forma fundada y
+                        presentando el presupuesto correspondiente. De estimarlo total o parcialmente
+                        procedente, el Juez emplazará al oferente de la prueba a depositar el importe
+                        correspondiente en el plazo de cinco (5) días, bajo igual apercibimiento del
+                        previsto en el inciso IV del Art. 180. En el caso de que la pericia hubiera
+                        sido ofrecida en forma directa o por adhesión, por ambas partes, el adelanto
+                        deberá ser aportado en forma conjunta. En el caso de que los oferentes de la
+                        pericia gocen del beneficio de litigar sin gastos, no les será exigible este
+                        adelanto, sin perjuicio de que los gastos deban ser soportados, oportunamente,
+                        por quien resulte condenado en costas. De igual forma se procederá cuando la
+                        pericia hubiera sido dispuesta de oficio. Conjuntamente con la presentación
+                        del informe, el perito deberá rendir cuenta documentada de la utilización de
+                        tales fondos que le hubieran sido adelantados y depositar, en su caso, el
+                        remanente.
+                    </p>
+
+                    <p>
+                        III.- Para los supuestos previstos en el inciso anterior en los que no les sea
+                        exigible al oferente de la pericia el adelanto de gastos o la medida de prueba
+                        haya sido dispuesta de oficio, el perito podrá excusarse de realizar la
+                        pericia, sin que ello lo haga pasible de sanción alguna.
+                    </p>
+
+                    <p>Art 183° FORMA DE DICTAMINAR. OMISIONES Y DEFICIENCIAS.</p>
+
+                    <p>
+                        I.- El informe o dictamen deberá ser producido en el plazo de veinte (20) días
+                        de aceptado el cargo o de realizado el reconocimiento o examen previos, en su
+                        caso. Este plazo podrá ser ampliado, a solicitud de los peritos previo a su
+                        vencimiento, en cinco (5) días más, si la complejidad del asunto lo
+                        justificare, a juicio del Tribunal. El incumplimiento sin causa justificada,
+                        importará la remoción automática de los peritos y la pérdida del derecho a
+                        cobro de honorarios por las actuaciones que pudieran haber cumplido, debiendo
+                        restituir el total del importe adelantado para gastos, hayan sido o no
+                        utilizados. Además, podrá el Juez aplicarles una multa de hasta un (1) JUS,
+                        sin perjuicio de los daños y perjuicios que su omisión pudiera ocasionar.
+                    </p>
+
+                    <p>
+                        II.- En el caso de la remoción previsto en el inciso anterior, el Juez
+                        procederá en forma inmediata a designar un nuevo perito directamente o
+                        mediante sorteo de la lista correspondiente.
+                    </p>
+
+                    <p>
+                        III.- El dictamen deberá ser imparcial y detallar los principios científicos o
+                        prácticos, las operaciones experimentales o técnicas en las cuales se funde y
+                        las conclusiones, respecto a cada punto sometido.
+                    </p>
+
+                    <p>
+                        IV.- Si el informe o dictamen no comprendiera todos los puntos propuestos por
+                        los litigantes o señalados por el juzgador o no se ajustare a lo dispuesto por
+                        los dos artículos precedentes o adoleciera de otras deficiencias que pudieran
+                        restarle eficacia, de oficio o a pedido de cualquiera de los litigantes, se
+                        dispondrá que, en el plazo de cinco (5) días, sean subsanadas las omisiones y
+                        deficiencias. Los litigantes podrán ejercer esa facultad dentro de los cinco
+                        (5) días de la notificación por cédula del decreto que dispone su agregación.
+                        La falta de cumplimiento de la orden judicial hará perder a los peritos el
+                        derecho a honorarios sin perjuicio de lo dispuesto por el Art. 19 de este
+                        Código. En este caso, deberá reintegrar las sumas recibidas a cuenta de
+                        honorarios y/o como adelanto de gastos conforme lo previsto en los dos Art.s
+                        precedentes.
+                    </p>
+
+                    <p>
+                        V.- A petición de parte o de oficio, en caso de ser necesario, se podrá citar
+                        a los peritos a comparecer a la audiencia final, donde podrán solicitárseles
+                        aclaraciones sobre los puntos que les fueron sometidos. Al efecto serán
+                        debidamente notificados. Si no pudieran comparecer con justa causa, deberán
+                        hacerlo saber al Tribunal con una antelación de cinco (5) días. La
+                        incomparecencia sin justa causa a la audiencia, los hará pasibles de una multa
+                        de hasta un JUS, sin perjuicio de que puedan ser obligados a comparecer por la
+                        fuerza pública.
+                    </p>
+
+                    <p>Art 184° HONORARIOS DE LOS PERITOS.</p>
+
+                    <p>
+                        I.- Por su labor, el perito percibirá honorarios equivalentes al cuatro por
+                        ciento (4%) del monto del juicio, pero nunca por un monto inferior a un cuarto
+                        (1/4) de JUS ni superior a veinte (20) JUS. El porcentaje referido podrá ser
+                        incrementado hasta el seis por ciento (6%), prudencial y fundadamente por el
+                        Juez, cuando la pericia se destacara por su complejidad y relevancia
+                        probatoria para la solución del caso, no pudiendo en ningún supuesto superar
+                        el límite máximo previsto en este inciso.
+                    </p>
+
+                    <p>
+                        II.- Si se hubiesen designado tres peritos para el mismo dictamen los
+                        honorarios conjuntos se elevarán al seis por ciento (6%) y se distribuirán en
+                        partes iguales entre ellos. En este caso el mínimo y el máximo del inciso
+                        anterior se duplicará.
+                    </p>
+
+                    <p>
+                        III.- Cuando hubiera multiplicidad de pericias, el conjunto de regulaciones no
+                        podrá superar el nueve por ciento (9%) del monto del juicio, en ningún caso.
+                        Dicho importe será distribuido prudencialmente entre los beneficiarios,
+                        conforme la labor desarrollada, complejidad, completitividad y claridad
+                        informativa de cada pericia y su valor e incidencia probatoria en la
+                        resolución del proceso.
+                    </p>
+
+                    <p>
+                        IV.- A los fines regulatorios, los intereses y la depreciación monetaria,
+                        cuando ésta sea procedente, integran el monto del juicio. Si al momento de
+                        practicarse la regulación éstos no estuvieran determinados, el perito tendrá
+                        derecho a una regulación complementaria cuando los citados rubros queden
+                        establecidos.
+                    </p>
+
+                    <p>
+                        V.- Los jueces no podrán dar por terminado ningún expediente, ni ordenarán
+                        levantamiento de embargos, inhibiciones o cualquier otra interdicción, ni
+                        harán entrega de fondos o valores depositados, mientras no resulte de autos
+                        haber sido pagados los honorarios y gastos de los peritos intervinientes,
+                        cuando tales medidas interesen al condenado en costas o a la parte vencedora
+                        que hubiera propuesto la prueba. El pago puede ser suplido por la conformidad
+                        presentada por escrito en autos o por depósito judicial de la suma que el juez
+                        fije para responder a honorarios no regulados o susceptibles de algún recurso.
+                    </p>
+
+                    <p>Art 185° PRUEBA DE TESTIGOS.</p>
+
+                    <p>
+                        I.- Puede ser testigo y está obligada comparecer, declarar y decir la verdad,
+                        toda persona mayor de trece (13) años, que no tenga algún impedimento para
+                        hacerlo. Exceptúense a los parientes y afines en línea recta, los hermanos,
+                        los cónyuges aún cuando estuvieran separados de hecho y los convivientes de
+                        cualquiera de los litigantes.
+                    </p>
+
+                    <p>
+                        II.- El número de testigos ofrecidos por los litigantes podrá ser limitado
+                        prudencialmente por el Tribunal atendiendo a los hechos concretos que se
+                        pretende probar por tal medio y que se manifestaran al ofrecer dicha prueba.
+                    </p>
+
+                    <p>
+                        III.- Al ofrecer la prueba de testigos, se indicará nombre, datos personales
+                        que se conozcan y domicilio de cada uno de ellos. Si se desconociere alguno de
+                        estos datos, se proporcionarán los necesarios para individualizar al testigo y
+                        hacer posible su citación.
+                    </p>
+
+                    <p>IV.- Es facultativo acompañar pliego de interrogatorio.</p>
+
+                    <p>
+                        V.- Sin perjuicio de la citación de los testigos por parte del Tribunal, será
+                        carga de quien los ofrece asegurar su presencia en la audiencia final, en la
+                        cual deberán declarar.
+                    </p>
+
+                    <p>Art 186° LUGAR DE LA DECLARACIÓN.</p>
+
+                    <p>
+                        I.- Los testigos prestarán declaración ante el Tribunal de la causa en la
+                        oportunidad que se fije a tales fines. Sin embargo, cualquiera de las partes
+                        tendrá derecho a solicitar que el testigo domiciliado en extraña
+                        circunscripción judicial declare ante el Juez o Tribunal de su domicilio antes
+                        de la audiencia final.
+                    </p>
+
+                    <p>
+                        Si la inspección del lugar contribuyese a la claridad del testimonio, podrán
+                        ser examinados los testigos en dicho lugar.
+                    </p>
+
+                    <p>
+                        II.- Cuando haya de recibirse declaración por exhorto, oficio o informe,
+                        deberá emplazarse al oferente para que en el término de dos (2) días acompañe
+                        el pliego de interrogatorio, si no lo hubiere hecho al ofrecer la prueba. El
+                        interrogatorio deberá ser exhibido a la contraria para que ésta pueda formular
+                        por escrito aclaraciones a las preguntas formuladas o nuevas preguntas sobre
+                        los hechos controvertidos, sin perjuicio de asistir o de hacerse representar
+                        si la declaración se encomendara a otro Tribunal.
+                    </p>
+
+                    <p>
+                        III.- El Presidente y Vicepresidente de la Nación, el Gobernador y
+                        Vicegobernador de la Provincia o los de cualquiera otra provincia argentina,
+                        los Intendentes Municipales, los Ministros Nacionales y Provinciales, las
+                        Dignidades Eclesiásticas, los Miembros del Congreso y de las Legislaturas
+                        provinciales, los Magistrados Judiciales y los Jefes Superiores de las Fuerzas
+                        Armadas prestarán declaración mediante informe.
+                    </p>
+
+                    <p>
+                        IV.- En caso de imposibilidad de un testigo, permanente o muy prolongada, para
+                        comparecer a la sede del Tribunal, y de ser imprescindible su declaración, el
+                        Juez o un miembro del Tribunal colegiado, lo examinará en el lugar donde se
+                        encuentre, con la asistencia de litigantes o sin ella, según se disponga, en
+                        atención a las circunstancias del caso.
+                    </p>
+
+                    <p>Art 187° CITACIÓN DE TESTIGOS. INDEMNIZACIÓN.</p>
+
+                    <p>
+                        Los testigos serán citados por lo menos dos (2) días antes de la fecha de su
+                        declaración, debiendo estar presentes al momento de la audiencia final,
+                        haciéndoseles saber que, si no comparecieren sin justa causa, serán conducidos
+                        con el auxilio de la fuerza pública, sin perjuicio de las sanciones que el
+                        Tribunal considerara aplicables conforme al Art. 47.
+                    </p>
+
+                    <p>
+                        Si la comparecencia del testigo ocasionase gastos de alojamiento, traslados u
+                        otros, serán a cargo de quien lo propuso, sin perjuicio de su restitución, si
+                        correspondiere, por el condenado en costas.
+                    </p>
+
+                    <p>Art 188° INTERROGATORIOS, AMPLIACIONES, REPREGUNTAS Y PREGUNTAS.</p>
+
+                    <p>
+                        Sin perjuicio de los pliegos de interrogatorios que pudieran haber acompañado
+                        las partes, los testigos serán interrogados libremente. Las preguntas del
+                        interrogatorio serán pertinentes, claras y precisas, no conteniendo cada una
+                        de ellas más de una cuestión. Se evitará la forma sugestiva.
+                    </p>
+
+                    <p>
+                        El proponente podrá ampliar el interrogatorio y la contraria repreguntar a fin
+                        de que el testigo concrete y aclare sus declaraciones y preguntar sobre
+                        cualquiera de los hechos controvertidos, con sujeción a lo dispuesto por el
+                        primer párrafo de este artículo.
+                    </p>
+
+                    <p>
+                        El juzgador puede limitar el interrogatorio, las ampliaciones, repreguntas y
+                        preguntas, si las considerase superfluas o excesivas y resolverá acto
+                        continuo, cualquier oposición que se dedujere.
+                    </p>
+
+                    <p>Art 189° RECEPCIÓN DE DECLARACIONES.</p>
+
+                    <p>
+                        I.- Los testigos serán examinados individual y sucesivamente, empezando, de
+                        ser posible, con los ofrecidos por el actor. Una vez examinados permanecerán
+                        en la sala de audiencias hasta la terminación del acto, salvo autorización
+                        concedida por el juzgador para retirarse antes, por motivos justificados.
+                    </p>
+
+                    <p>
+                        Deberá procurarse que los testigos que hayan declarado no tomen contacto con
+                        los que aún no lo hubieren hecho.
+                    </p>
+
+                    <p>
+                        II.- Prestarán juramento de decir la verdad y serán informados de las
+                        sanciones penales del falso testimonio.
+                    </p>
+
+                    <p>III - Acto continuo cada testigo será interrogado.</p>
+
+                    <p>1) Por su nombre, edad, nacionalidad, profesión, estado y domicilio.</p>
+
+                    <p>
+                        2) Por el conocimiento de los litigantes y si es cónyuge, conviviente o si es
+                        pariente de alguno de ellos y en qué grado.
+                    </p>
+
+                    <p>
+                        3) Si es amigo con frecuencia de trato o enemigo, acreedor, deudor, empleado o
+                        empleador o tiene algún otro género de relación o vínculo con cualquiera de
+                        los litigantes.
+                    </p>
+
+                    <p>
+                        IV.- Luego se les examinará de acuerdo al interrogatorio y ampliaciones;
+                        repreguntas y preguntas de la contraria, sin perjuicio de las preguntas y
+                        pedidos de aclaraciones que el juzgador estime conveniente formular. En todo
+                        caso deberán dar razón de sus dichos.
+                    </p>
+
+                    <p>
+                        V.- El testigo deberá justificar su identidad con el documento idóneo
+                        correspondiente, dejándose constancia de ello en el acta. Si no pudiera
+                        hacerlo, se tomará su declaración, emplazándolo a acreditar su identidad en el
+                        plazo de un (1) día bajo apercibimiento de no ser considerada la misma ni
+                        expedirle constancia.
+                    </p>
+
+                    <p>Art 190° OPOSICIONES Y TACHAS.</p>
+
+                    <p>
+                        I.- Si la persona que comparece, de acuerdo a sus datos personales y demás
+                        antecedentes, no fuera la misma que se ofreció como testigo o no reuniera los
+                        requisitos exigidos por el Art. 185, el Tribunal, de oficio o a pedido de la
+                        contraria, no admitirá su declaración.
+                    </p>
+
+                    <p>
+                        II.- Las preguntas del pliego y ampliaciones; las repreguntas y preguntas de
+                        la contraria, que no se ajustaren a lo dispuesto por el Art. 188, serán
+                        modificadas o desestimadas, de oficio.
+                    </p>
+
+                    <p>
+                        III.- Antes de la audiencia final podrán las partes oponerse a la declaración
+                        de algún testigo debiendo justificarla debidamente.
+                    </p>
+
+                    <p>
+                        En el acto de ésta, los litigantes podrán tachar a los testigos por causales
+                        que permitan presumir parcialidad en sus declaraciones y ofrecer la prueba de
+                        los hechos en los cuales la funden. Si se tratara de testigos, no podrán
+                        ofrecerse más de tres, por cada testigo tachado. Esa prueba se recibirá en la
+                        misma audiencia. Si los testigos ofrecidos para justificar la tacha no
+                        estuvieran presentes, serán inmediatamente citados por el medio idóneo más
+                        ágil posible. Si no comparecieran caducará el ofrecimiento. El planteo de la
+                        tacha no suspenderá la audiencia, siendo el mérito de la misma apreciado en la
+                        sentencia.
+                    </p>
+
+                    <p>
+                        IV.- Si el testigo se negara a declarar invocando secreto profesional o
+                        inminencia de daño moral o material para él, su cónyuge, su conviviente,
+                        ascendientes, descendientes, personas menores de edad o con capacidad
+                        restringida a su cargo, el juzgador le escuchará privadamente sobre los
+                        motivos y circunstancias de su negativa y le permitirá o no abstenerse de
+                        contestar. No podrá invocar el secreto profesional cuando el interesado exima
+                        al testigo del deber de guardar el secreto, salvo que el Juez, por razones
+                        vinculadas al orden público, lo autorice a mantenerse en él.
+                    </p>
+
+                    <p>Art 191° CAREOS.</p>
+
+                    <p>
+                        Únicamente es admisible el careo entre testigos. El pedido de esta medida
+                        podrá ser admitida por el juzgador siempre que sea útil y pertinente.
+                    </p>
+
+                    <p>
+                        Si fuera admitido, comenzará con la lectura de las declaraciones de quienes
+                        han de ser careados y luego se les concederá la palabra sucesivamente, sobre
+                        los puntos en los cuales estuvieran en desacuerdo, asentándose lo que
+                        manifiesten al respecto.
+                    </p>
+
+                    <p>Art 192° SANCIONES A LOS TESTIGOS.</p>
+
+                    <p>
+                        Los testigos que sin justa causa se negaran a declarar o a responder a
+                        determinadas preguntas o se manifestaran en forma irrespetuosa o de cualquier
+                        manera dificultaran el esclarecimiento de la verdad o el desarrollo de la
+                        audiencia, podrán ser sancionados de acuerdo a lo dispuesto por el Art. 47.
+                    </p>
+
+                    <p>
+                        Si la declaración ofreciere indicios graves de falso testimonio o de otro
+                        delito, el juzgador podrá decretar, en ese mismo acto, la detención de los
+                        culpables, remitiéndolos a disposición de la justicia penal, con testimonio o
+                        certificado de las piezas de donde surgieren los indicios. Igual actitud podrá
+                        adoptar en el momento de pronunciar sentencia.
+                    </p>
+
+                    <p>Art 193° INSPECCIÓN Y EXAMEN JUDICIAL.</p>
+
+                    <p>
+                        I.- Cuando haya sido solicitado oportunamente por los litigantes, el examen
+                        judicial de personas o inspección de lugares, cosas o circunstancias idóneas y
+                        pertinentes, dentro de la circunscripción del Tribunal y el juzgador
+                        considerare conveniente admitir esa prueba o decretarla de oficio en el auto
+                        al cual se refiere el Art. 172, individualizará lo que haya de ser motivo del
+                        examen y el lugar, fecha y hora de su realización. Podrá, si lo creyere
+                        conveniente, disponer la concurrencia de peritos.
+                    </p>
+
+                    <p>
+                        II.- En ningún caso el Juez de la causa o el requerido conforme lo dispuesto
+                        en el Art. 173, podrá delegar la función encomendada bajo pena de nulidad, sin
+                        perjuicio de la responsabilidad que le quepa, pudiendo concurrir a realizar la
+                        medida con un funcionario que lo asista. Sin embargo, si la inspección o
+                        examen debiera realizarse a más de treinta kilómetros (30km) de la sede del
+                        Tribunal, sin que pueda encomendarse a otro Magistrado y su realización en
+                        forma personal provocara desajustes en el normal funcionamiento del Juzgado,
+                        el Juez podrá, a través de resolución fundada en la que se haga referencia a
+                        ambos requisitos, delegar la medida al Oficial de Justicia u otro funcionario
+                        idóneo, y disponer la utilización de los medios de documentación del acto
+                        correspondiente, en especial, la utilización de filmación en soporte digital,
+                        de contar con este medio.
+                    </p>
+
+                    <p>
+                        III.- Los litigantes podrán comparecer, salvo que el Tribunal resuelva lo
+                        contrario; y hacer las observaciones que estimaren necesarias.
+                    </p>
+
+                    <p>IV.- Se labrará acta del resultado del examen.</p>
+
+                    <p>Art 194° REPRODUCCIONES.</p>
+
+                    <p>
+                        En el caso de examen judicial o separadamente de él, podrá disponerse de
+                        oficio o a petición de litigantes, la reproducción gráfica de personas,
+                        lugares, cosas, filmaciones, fotos, grabaciones o medios idóneos y pertinentes
+                        como elementos de prueba, usando el medio técnico más fiel y adecuado al fin
+                        que se persiguiere.
+                    </p>
+
+                    <p>
+                        En el auto previsto en el Art. 172 o en la audiencia final, se tomarán las
+                        medidas para la recepción de esta prueba y su agregación al expediente, si
+                        fuere ello posible, o su conservación en el Tribunal en caso contrario, como
+                        asimismo sobre la designación de perito o experto encargado de su
+                        reproducción.
+                    </p>
+
+                    <p>Art 195° EXPERIENCIAS.</p>
+
+                    <p>
+                        Podrá también disponerse experiencias sobre personas o cosas y
+                        reconstrucciones de hechos, siempre que no exista peligro para la vida y la
+                        salud de los sujetos de ellas.
+                    </p>
+
+                    <p>Se aplicarán las reglas establecidas en los Arts. 193 y 194.-</p>
+
+                    <p>Art 196° COLABORACIÓN DE TERCEROS O DE LITIGANTES.</p>
+
+                    <p>
+                        I.- Los terceros están obligados a facilitar los exámenes, reproducciones,
+                        experiencias y reconstrucciones, salvo en cuanto a su persona. Si se opusieren
+                        podrá allanarse el domicilio y hacerse uso de la fuerza pública, a menos que
+                        su oposición se fundare en que la diligencia les ocasionará daño cuyo pago no
+                        se los garantizare, o agravios morales de consideración. El Tribunal resolverá
+                        lo que corresponda, previa vista al litigante que ofreció la prueba.
+                    </p>
+
+                    <p>
+                        II.- La colaboración de los litigantes es obligatoria en todo caso y se
+                        procederá en igual forma. Pero si se opusieren por tratarse de diligencias
+                        sobre su persona, el Tribunal dejará sin efecto la medida y, si careciere su
+                        oposición de motivos razonables, el Juez meritará su postura al momento de
+                        dictar sentencia.
+                    </p>
+
+                    <p>
+                        Art 197° En la inspección, reproducción gráfica o experiencia con
+                        personas, se tomarán todas las precauciones que la técnica aconseja para
+                        asegurar su eficacia y la menor molestia posible para aquéllas.
+                    </p>
+
+                    <p>Art 198° OTROS MEDIOS DE PRUEBA.</p>
+
+                    <p>
+                        Cuando se ofreciere un medio de prueba idóneo y pertinente, no previsto por la
+                        ley, el Tribunal establecerá la manera de diligenciarlo, aplicando en lo
+                        posible, por analogía, el procedimiento previsto para otras pruebas.
+                    </p>
+
+                    <p>Art 199° APRECIACIÓN DE LA PRUEBA.</p>
+
+                    <p>
+                        Todas y cada una de las pruebas serán apreciadas según las reglas de la sana
+                        crítica, salvo disposición expresa de la ley en contrario.
+                    </p>
+
+                </div>
+            </section>
+            <section id="rGral">
+                <h3>Reglas Generales</h3>
+                <dl>
+                    <dt>Prueba Fuera del Tribunal (Art. 174)</dt>
+                    <dd>
+                        <p>Respecto de la producción de prueba fuera de la sede del Tribunal, se debe considerar si la
+                            misma se produce dentro o fuera de la circunscripción judicial.</p>
+                        <p>En caso de que se encuentre dentro de la circunscripción y a su vez dentro del radio urbano
+                            del Tribunal, es decir, existe proximidad, entonces el Juez o un miembro del Tribunal debe
+                            recibirla personalmente en forma indelegable.</p>
+                        <p>Caso contrario, si se encuentra fuera del radio urbano pero dentro de la circunscripcion,
+                            entonces pueden optar por encomendar la recepción a un Juez de Paz, mediante oficio.</p>
+                        <p>Ahora bien, si la circunscripción es extraña, entonces hay que revisar si enecuentra dentro o
+                            fuera del país. Si es dentro del país se puede encomendar su recepción al Juez o Tribunal de
+                            igual grado y materia que tenga competencia territorial, mediante oficio.</p>
+                        <p>Si debe producirse fuera del país se encomienda al magistrado judicial que correspondiere,
+                            mediante exhorto. En este caso, quien ofreció la prueba deberá afianzar los gastos que la
+                            contraria debiera efectuar para vigilar su recepción.</p>
+                        <p>Para terminar, respecto de la inspección judicial, si la misma debe producirse necesariamente
+                            por el Juez de la causa, salvo que deba practirarse fuera de la circunscripción, en cuyo
+                            caso podrá delegarse a Juez de igual grado y materia con competencia territorial. Esto se
+                            debe a la naturaleza directa de la prueba.</p>
+                    </dd>
+                    <dt>Carga de la Prueba (Art. 175)</dt>
+                    <dd>
+                        <p>Partiendo de la base de que el objeto de la prueba son los hechos alegados por las partes,
+                            resulta útil conocer la naturaleza de los hechos que alega cada parte:</p>
+                        <ul>
+                            <li>Actor: Hechos constitutivos sobre los cuales se funda la pretensión</li>
+                            <li>Demandado: Hechos extintivos e impeditivos de la pretensión sobre los cuales se funda la
+                                defensa</li>
+                        </ul>
+                        <p>Ahora bien, como regla general, cada litigante debe probar o aportar la prueba de los hechos
+                            que invocó y que no fueron reconocidos por la contraria, es decir, los hechos a probar son
+                            los alegados, controvertidos y conducentes o pertinentes.</p>
+                        <p>A su vez, es carga procesal de cada litigante producir la prueba que haya ofrecido, en cuanto
+                            dependa de su actividad. Sin embargo, por el principio de adquisición de la prueba, también
+                            puede ser producida por los demas litigantes. Esto se debe a que toda la prueba ofrecida es
+                            funcional al proceso, no pudiendo ser exclusivamente aprovechada por la parte que la
+                            propone.</p>
+                        <p>Cabe aclarar que la carga procesal de producción de prueba se vincula con el principio
+                            general de caducidad automática de su producción, la cual se produce una vez vencido el
+                            plazo de producción fijado en la audiencia inicial.</p>
+                        <p>Excepcionalmente, de conformidad con lo establecido por el artículo 173 i. g, el plazo de
+                            producción de prueba puede ser ampliado prudencialmente por el juzgado a petición de parte
+                            por única vez, lo cual sirve de prorroga, sin embargo de ninguna manera altera el principio
+                            de caducidad automática, la cual opera pasados los 120 días establecidos por la acordada</p>
+                    </dd>
+                    <dt>Libertad Probatoria (Art. 176)</dt>
+                    <dd>
+                        <p>Como principio general existe libertad probatoria, es decir, los medios probatorios regulados
+                            por el CPCCT no son exclusivos, pudiendo ofrecerse otros, siempre y cuando no sean
+                            prohibidos por la ley, sean idódenos y pertinentes.</p>
+                        <p>Respecto de las presunciones, indicios y hechos notorios, pueden ser invocados por el Juez a
+                            pesar de no haber sido "ofrecidos" por las partes. Esto se debe a que los mencionados se
+                            encuentran exentos de prueba por su naturaleza.</p>
+                        <p>Los medios probatorios regulados por el CPCCT son los siguientes:</p>
+                        <ul>
+                            <li>Prueba Documental</li>
+                            <li>Dictamen o Informe de Peritos y Expertos</li>
+                            <li>Declaración Testimonial</li>
+                            <li>Examen Judicial</li>
+                            <li>Reproducciones y experiencias</li>
+                        </ul>
+                        <p>Para terminar, cabe aclarar que cuando se ofreciere un medio de prueba idóneo y pertinente,
+                            no previsto por la ley, el Tribunal establecerá la manera de diligenciarlo, aplicando en lo
+                            posible, por analogía, el procedimiento previsto para otras pruebas.</p>
+                    </dd>
+
+                </dl>
+            </section>
+        </article>
+
+    </div>
+
+    <script>
+        /*Nav*/
+        function myFunction() {
+            var input, filter, ul, li, a, i;
+            input = document.getElementById("mySearch");
+            filter = input.value.toUpperCase();
+            ul = document.getElementById("myMenu");
+            li = ul.getElementsByTagName("li");
+            for (i = 0; i < li.length; i++) {
+                a = li[i].getElementsByTagName("a")[0];
+                if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                    li[i].style.display = "";
+                } else {
+                    li[i].style.display = "none";
+                }
+            }
+        }
+
+
+        /*Ctrl+F*/
+        var currentIndex = 0;
+        var originalContent = document.getElementById("content").innerHTML;
+
+        document.getElementById("search-form").addEventListener("submit", function (event) {
+            event.preventDefault(); // prevent the form from submitting
+            findText();
+        });
+
+        function findText() {
+            var searchText = document.getElementById("search-input").value.toLowerCase();
+            var content = originalContent.toLowerCase();
+            var index = content.indexOf(searchText, currentIndex);
+            if (index != -1) {
+                // highlight the found text
+                var newText = originalContent.substring(0, index) + "<span id='highlight'>" + originalContent.substring(index, index + searchText.length) + "</span>" + originalContent.substring(index + searchText.length);
+                document.getElementById("content").innerHTML = newText;
+                var highlightedElement = document.getElementById("highlight");
+
+
+
+                highlightedElement.scrollIntoView(true); // scroll to the highlighted element
+                highlightedElement.focus(); // focus on the highlighted element
+                currentIndex = index + searchText.length; // update current index
+            } else {
+                alert("¡Ese fue el último resultado!");
+                currentIndex = 0; // reset index
+            }
+        }
+    </script>
+</body>
+
+</html>
