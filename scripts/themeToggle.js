@@ -22,36 +22,34 @@ export function setupThemeToggle(mainSelector) {
 
   // Función para actualizar el ícono del botón según el tema
   function updateButtonIcon() {
-    if (body.classList.contains('dark-theme')) {
-      // Modo oscuro activo: mostrar ícono de sol (para cambiar a claro)
+    if (body.classList.contains('light-theme')) {
+      // Modo claro activo: mostrar ícono de sol (para cambiar a oscuro)
       btnToggle.innerHTML = `<span class="material-icons">light_mode</span>`;
-      btnToggle.setAttribute('aria-label', 'Cambiar a modo claro');
-    } else {
-      // Modo claro activo: mostrar ícono de luna (para cambiar a oscuro)
-      btnToggle.innerHTML = `<span class="material-icons">dark_mode</span>`;
       btnToggle.setAttribute('aria-label', 'Cambiar a modo oscuro');
+    } else {
+      // Modo oscuro activo: mostrar ícono de luna (para cambiar a claro)
+      btnToggle.innerHTML = `<span class="material-icons">dark_mode</span>`;
+      btnToggle.setAttribute('aria-label', 'Cambiar a modo claro');
     }
   }
 
-  // Comprobar tema guardado o preferencia del sistema
+  // Aplicar tema guardado o, si no hay, forzar dark por defecto (sin clase)
   const savedTheme = localStorage.getItem('theme');
-  if (savedTheme) {
-    if (savedTheme === 'dark') {
-      body.classList.add('dark-theme');
-    } else {
-      body.classList.remove('dark-theme');
-    }
-  } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-    body.classList.add('dark-theme');
+  if (savedTheme === 'light') {
+    body.classList.add('light-theme');
+  } else {
+    body.classList.remove('light-theme');
+    localStorage.setItem('theme', 'dark');
   }
 
   updateButtonIcon();
 
   btnToggle.addEventListener('click', () => {
-    body.classList.toggle('dark-theme');
-    if (body.classList.contains('dark-theme')) {
+    if (body.classList.contains('light-theme')) {
+      body.classList.remove('light-theme');
       localStorage.setItem('theme', 'dark');
     } else {
+      body.classList.add('light-theme');
       localStorage.setItem('theme', 'light');
     }
     updateButtonIcon();

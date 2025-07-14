@@ -1,0 +1,19 @@
+@import 'reset.css';
+
+
+i {
+    font-weight: bold;
+    color: #FFA07A;
+}
+
+
+
+dt {
+    font-weight: bold;    
+}
+
+dd {
+    border-left: solid 1px #ccc;
+    margin-left: 1.5rem;
+    padding: 0.5rem 1rem;
+}

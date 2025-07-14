@@ -1,0 +1,96 @@
+@import url("reset.css");
+
+#highlight {
+    background-color: #0066CC;
+    scroll-margin-top: 10rem;
+    color: #f1f1f1;
+    font-weight: bold;
+}
+
+main {
+    margin-bottom: 10rem;
+    padding: 2rem;
+}
+
+nav {
+    position: sticky;
+    width: 90vw;
+    justify-content: center;
+    text-align: center;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.1em;
+    z-index: 1000;
+    background: var(--color-header-footer-bg);
+    padding: 1em;
+    border-radius: 1em;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--color-borde);
+    transition: background 0.3s, border-color 0.3s;
+    padding: 1.5rem;
+    margin: auto;
+}
+
+input {
+    color: var(--color-texto-principal);
+}
+
+h3,
+h4,
+h5 {
+    display: block;
+    margin-left: 0;
+}
+
+
+h3:target,
+h4:target {
+    border: solid 1px;
+    scroll-margin-top: 13rem;
+    border-radius: 1rem;
+    padding: 1rem;
+}
+
+/* Contenedor principal */
+#indice {    
+    width: 90vw;
+}
+
+div>div {
+    margin-bottom: 1em;
+}
+
+/* Estilos para enlaces del índice */
+div>div>a {
+    display: block;
+    color: var(--color-enlace);
+    text-decoration: none;
+    transition: border-color 0.3s, background-color 0.3s;
+    border-radius: 0.3em;
+    margin-bottom: 1em;
+}
+
+div>div>a:hover,
+div>div>a:focus {
+    border-left-color: var(--color-enlace-hover);
+    background-color: var(--color-fondo-hover);
+    color: var(--color-enlace-hover);
+    outline: none;
+}
+
+
+
+/* Subtítulos h3 dentro de div (ejemplo: Sección Primera) */
+div h3 {
+    margin: 0.8em 0 0.3em 1.5em;
+    padding-left: 0.4em;
+    color: var(--color-enlace);
+}
+
+
+/* Para que los enlaces tengan una transición suave */
+a {
+    transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+}
